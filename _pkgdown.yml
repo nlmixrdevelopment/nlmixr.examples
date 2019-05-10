@@ -1,0 +1,42 @@
+template:
+  params:
+    bootswatch: flatly
+navbar:
+  left:
+  - text: Articles
+    icon: fas fa-book
+    menu:
+        - text: "--------------------------"
+        - text: "Getting started"
+        - text: "Introduction to Running Nlmixr"
+          href: https://nlmixrdevelopment.github.io/nlmixr/articles/running_nlmixr.html
+        - text: "Using Multiple Endpoints in Nlmixr"
+          href: https://nlmixrdevelopment.github.io/nlmixr/articles/multiple-endpoints.html
+        - text: "--------------------------"
+        - text: "Going further"
+        - text: "Model Piping"
+          href: https://nlmixrdevelopment.github.io/nlmixr/articles/modelPiping.html
+        - text: "Sweeping models to tidy datasets (broom)"
+          href: https://nlmixrdevelopment.github.io/nlmixr/articles/broom.html
+  - text: Example models
+    icon: fas fa-chalkboard-teacher
+    menu:
+        - text: "Phenobarbatol with correlations"
+          href: https://nlmixrdevelopment.github.io/nlmixr/articles/addingCovariances.html
+        - text: "--------------------------"
+        - text: Page 2018
+        - text: "Nonlinear PK/PD -- Nimotuzumab"
+          href: articles/nimo.html
+        - text: "PBPK -- Mavoglurant"
+          href: articles/mavoglurant.html
+  - text: "Cheat Sheet"
+    icon: fa-scroll fa-lg
+    href: https://github.com/nlmixrdevelopment/nlmixr/raw/master/CheatSheet_nlmixr.pdf
+  - text: "Functions"
+    icon: fa-file-code-o fa-lg
+    href: https://nlmixrdevelopment.github.io/nlmixr/reference/index.html
+  right:
+  - icon: fa-github fa-lg
+    href: https://github.com/nlmixrdevelopment/nlmixr
+  - icon: fa-download
+    href: https://github.com/nlmixrdevelopment/nlmixr/releases

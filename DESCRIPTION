@@ -1,0 +1,52 @@
+Package: nlmixr.examples
+Title: This package has datasets and example models from nlmixr
+Version: 0.0.0.9000
+Authors@R: c(person("Matthew","Fidler",
+      role = "aut", email = "matthew.fidler@gmail.com",
+      comment=c(ORCID="0000-0001-8538-6691")),
+   person("Yuan", "Xiong", 
+      role = "aut", email = "yuan.xiong@gmail.com"),
+   person("Rik", "Schoemaker", 
+      role = "aut", email = "rik.schoemaker@occams.com",
+      comment=c(ORCID="0000-0002-7538-3005")),
+   person("Justin", "Wilkins", 
+      role = "aut", email = "justin.wilkins@occams.com",
+      comment=c(ORCID="0000-0002-7099-9396")),
+   person("Mirjam","Trame",
+      role = "aut", email = "mirjam.trame@gmail.com"),
+   person("Richard", "Hooijmaijers", email = "richardhooijmaijers@gmail.com",
+      role = "aut"),
+   person("Teun","Post",
+      role = "aut", email = "t.post@lapp.nl"),   
+   person("Robert","Leary", role = "ctb"),
+   person("Wenping", "Wang", 
+      role = c("aut", "cre"), email = "wwang8198@gmail.com"),
+   person("Hadley","Wickham", role = "ctb"),
+   person("Dirk","Eddelbuettel",
+      role = "cph", email = "edd@debian.org"),
+   person("Johannes", "Pfeifer",role="ctb"),
+   person("Robert B.", "Schnabel",role="ctb"),
+   person("Elizabeth", "Eskow", role="ctb"),
+   person("Emmanuelle", "Comets", role="ctb", email="emmanuelle.comets@inserm.fr"),
+   person("Audrey", "Lavenu", role="ctb"),
+   person("Marc", "Lavielle", role="ctb"),
+   person("David","Ardia",role = "cph"),
+   person("Bill", "Denney", role=c("ctb"),
+      email="wdenney@humanpredictions.com",
+      comment=c(ORCID="0000-0002-5759-428X")),
+   person("Katharine","Mullen",role = "cph")
+   )
+Description: What the package does (one paragraph).
+Depends: R (>= 3.5.1)
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    knitr,
+    rmarkdown,
+    nlmixr,
+    xpose,
+    xpose.nlmixr,
+    ggplot2
+VignetteBuilder: knitr
+RoxygenNote: 6.1.1

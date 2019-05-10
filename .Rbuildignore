@@ -1,0 +1,6 @@
+^docs$
+^_pkgdown\.yml$
+^Meta$
+^doc$
+^nlmixr\.Rproj$
+^\.Rproj\.user$
