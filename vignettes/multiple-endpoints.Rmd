@@ -15,7 +15,11 @@ knitr::opts_chunk$set(
   message = FALSE,
   warning = FALSE,
   out.width = "100%"
-)
+  )
+## These options cache the models and the model simulations in R
+## To run the actual models on your system, take the save options off.
+options(nlmixr.save=TRUE,
+        nlmixr.save.dir=system.file(package="nlmixr.examples"));
 ```
 ![nlmixr](logo.png)
 
@@ -27,10 +31,7 @@ Funaki and Nick Holford) is Warfarin.
 
 ```{r}
 library(nlmixr)
-## These options cache the models and the model simulations in R
-## To run the actual models on your system, take the save options off.
-options(nlmixr.save=TRUE,
-        nlmixr.save.dir=system.file(package="nlmixr.examples"));
+library(ggplot2)
 ```
 
 In this example, we have a transit-compartment (from depot to gut to
@@ -330,15 +331,14 @@ print(fit.TOS);
 ```
 ### SAEM Diagnostic plots
 ```{r}
-library(ggplot2)
 
 plot(fit.TOS);
 
 
-v1s <- vpc(fit.TOS, show=list(obs_dv=T), scales="free_y") +
+v1s <- nlmixr::vpc(fit.TOS, show=list(obs_dv=T), scales="free_y") +
     ylab("Warfarin Cp [mg/L] or PCA") +
     xlab("Time [h]");
-v2s <- vpc(fit.TOS, show=list(obs_dv=T), pred_corr = TRUE) +
+v2s <- nlmixr::vpc(fit.TOS, show=list(obs_dv=T), pred_corr = TRUE) +
     ylab("Prediction Corrected Warfarin Cp [mg/L] or PCA") +
     xlab("Time [h]");
 
@@ -358,10 +358,10 @@ fit.TOF <- nlmixr(pk.turnover.emax3, warfarin, "focei", control=list(print=0));
 print(fit.TOF)
 plot(fit.TOF)
 
-v1f <- vpc(fit.TOF, show=list(obs_dv=T), scales="free_y") +
+v1f <- nlmixr::vpc(fit.TOF, show=list(obs_dv=T), scales="free_y") +
     ylab("Warfarin Cp [mg/L] or PCA") +
     xlab("Time [h]");
-v2f <- vpc(fit.TOF, show=list(obs_dv=T), pred_corr = TRUE) +
+v2f <- nlmixr::vpc(fit.TOF, show=list(obs_dv=T), pred_corr = TRUE) +
         ylab("Prediction Corrected Warfarin Cp [mg/L] or PCA") +
     xlab("Time [h]")
 

@@ -13,7 +13,13 @@ vignette: >
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
-)
+  )
+
+## These options cache the models and the model simulations in R
+## To run the actual models on your system, take the save options off.
+options(nlmixr.save=TRUE,
+        nlmixr.save.dir=system.file(package="nlmixr.examples"));
+
 ```
 
 ![nlmixr](logo.png)
@@ -28,14 +34,6 @@ try a full PBPK model. This one was published for mavoglurant
 
 ```{r}
 library(nlmixr)
-## These options cache the models and the model simulations in R
-## To run the actual models on your system, take the save options off.
-options(nlmixr.save=TRUE,
-        nlmixr.save.dir=system.file(package="nlmixr.examples"));
-
-## Note to get the datasets you can use:
-## remotes::install_github("nlmixrdevelopment/nlmixr.examples")
-library(nlmixr.examples) ## For nlmixr.examples data
 
 library(xpose)
 library(xpose.nlmixr)

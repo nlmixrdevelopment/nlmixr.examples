@@ -2,3 +2,11 @@ Meta
 doc
 inst/doc
 .Rproj.user
+vignettes/*.R
+vignettes/*.html
+vignettes/*_files/*
+
+/vignettes/xgxr-nlmixr-ggpmx.log
+/vignettes/xgxr-nlmixr-ggpmx.tex
+/vignettes/Rplots.pdf
+/vignettes/.Rhistory
