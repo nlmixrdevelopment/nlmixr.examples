@@ -11,7 +11,7 @@ navbar:
         - text: "Introduction to Running Nlmixr"
           href: https://nlmixrdevelopment.github.io/nlmixr/articles/running_nlmixr.html
         - text: "Using Multiple Endpoints in Nlmixr"
-          href: https://nlmixrdevelopment.github.io/nlmixr/articles/multiple-endpoints.html
+          href: articles/multiple-endpoints.html
         - text: "--------------------------"
         - text: "Going further"
         - text: "Model Piping"
@@ -22,7 +22,7 @@ navbar:
     icon: fas fa-chalkboard-teacher
     menu:
         - text: "Phenobarbatol with correlations"
-          href: https://nlmixrdevelopment.github.io/nlmixr/articles/addingCovariances.html
+          href: articles/addingCovariances.html
         - text: "--------------------------"
         - text: Page 2018
         - text: "Nonlinear PK/PD -- Nimotuzumab"

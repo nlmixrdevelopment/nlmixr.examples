@@ -1,19 +1,19 @@
-expected_values[[runno]] <- list(lik = c(-26399.07, 52808.13, 52840.38), param = c(1.3885, 
-4.2667, 0.20056), stdev_param = c(0.2972, 0.28145, NA), sigma = c(prop.err = 0.20056), 
-    parFixedDf = structure(list(Estimate = c(lCl = 1.38848443220415, 
-    lVc = 4.26671697591008, prop.err = 0.200563316891022), SE = c(lCl = 0.0260975109970442, 
-    lVc = 0.0275767782170454, prop.err = NA), "%RSE" = c(1.87956813859379, 
-    0.646323118518152, NA), "Back-transformed" = c(4.00876988416658, 
-    71.2872133840086, 0.200563316891022), "CI Lower" = c(3.80887644972731, 
-    67.536452138479, NA), "CI Upper" = c(4.21915391489043, 75.2462800627599, 
-    NA), "BSV(CV%)" = c(28.7121180839493, 30.3888975138181, NA
-    ), "Shrink(SD)%" = c(0.300224827018136, 1.56703885243035, 
+expected_values[[runno]] <- list(lik = c(-26406.04, 52822.08, 52854.33), param = c(1.3868, 
+4.2664, 0.19996), stdev_param = c(0.29738, 0.28228, NA), sigma = c(prop.err = 0.19996), 
+    parFixedDf = structure(list(Estimate = c(lCl = 1.38676646709307, 
+    lVc = 4.26639783551896, prop.err = 0.1999567033712), SE = c(lCl = 0.0261853981639702, 
+    lVc = 0.0276030099842583, prop.err = NA), "%RSE" = c(1.88823416092976, 
+    0.646986311366827, NA), "Back-transformed" = c(4.00188886973099, 
+    71.2644663847834, 0.1999567033712), "CI Lower" = c(3.80168363241227, 
+    67.5114308917156, NA), "CI Upper" = c(4.2126373665435, 75.2261372930124, 
+    NA), "BSV(CV%)" = c(28.8001706933819, 30.4072218170079, NA
+    ), "Shrink(SD)%" = c(0.274314801681708, 1.54631753635023, 
     NA)), class = "data.frame", row.names = c("lCl", "lVc", "prop.err"
-    )), omega = structure(c(0.0883299740346363, 0, 0, 0.0792164333136461
+    )), omega = structure(c(0.0884319551980716, 0, 0, 0.0796841663561657
     ), .Dim = c(2L, 2L), .Dimnames = list(c("eta.Vc", "eta.Cl"
-    ), c("eta.Vc", "eta.Cl"))), time = structure(list(setup = 0.165125000000001, 
-        optimize = 13.036798, covariance = 13.0368, table = 0.235000000000014, 
-        other = 20.108277), class = "data.frame", row.names = "elapsed"), 
-    objDf = structure(list(OBJF = 44202.3813388104, AIC = 52808.1323784069, 
-        BIC = 52840.3844391956, "Log-likelihood" = -26399.0661892035, 
-        "Condition Number" = 1.24404070664998), row.names = "FOCEi", class = "data.frame")) 
+    ), c("eta.Vc", "eta.Cl"))), time = structure(list(setup = 0.146793999999996, 
+        optimize = 1.989397, covariance = 1.989398, table = 0.167999999999999, 
+        other = 5.139411), class = "data.frame", row.names = "elapsed"), 
+    objDf = structure(list(OBJF = 44216.3312341035, AIC = 52822.0822737, 
+        BIC = 52854.3343344886, "Log-likelihood" = -26406.04113685, 
+        "Condition Number" = 1.23085240245867), row.names = "FOCEi", class = "data.frame")) 

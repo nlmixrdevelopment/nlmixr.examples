@@ -331,7 +331,6 @@ print(fit.TOS);
 ```
 ### SAEM Diagnostic plots
 ```{r}
-
 plot(fit.TOS);
 
 

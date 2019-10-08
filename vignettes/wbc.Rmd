@@ -13,6 +13,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
   )
+
 ## These options cache the models and the model simulations in R
 ## To run the actual models on your system, take the save options off.
 options(nlmixr.save=TRUE,
@@ -25,11 +26,6 @@ options(nlmixr.save=TRUE,
 library(nlmixr)
 library(xpose)
 library(xpose.nlmixr)
-
-## These options cache the models and the model simulations in R
-## To run the actual models on your system, take the save options off.
-options(nlmixr.save=TRUE,
-        nlmixr.save.dir=system.file(package="nlmixr.examples"));
 
 ```
 

@@ -4,7 +4,7 @@ NA), sigma = c(prop.err = NaN), parFixedDf = structure(list(Estimate = c(lCl = 1
 lVc = 4.47097852854617, lQ = 1.60249299439807, lVp = 4.01547659835727, 
 prop.err = NaN), SE = c(lCl = 0.0394241542239158, lVc = 0.0396078530596976, 
 lQ = 0.0403902440147608, lVp = 0.039850526304257, prop.err = NA
-), "%RSE" = c(2.4842636510638, 0.885887794065898, 2.5204630632368, 
+), "%RSE" = c(2.4842636510638, 0.885887794065898, 2.52046306323681, 
 0.992423323312603, NA), "Back-transformed" = c(4.8888412979973, 
 87.4422458970768, 4.96539571088139, 55.4497163496269, NaN), "CI Lower" = c(4.52530690714031, 
 80.910901117849, 4.58747411474492, 51.2835994399591, NA), "CI Upper" = c(5.28157973093313, 
@@ -15,8 +15,8 @@ lQ = 0.0403902440147608, lVp = 0.039850526304257, prop.err = NA
 0, 0, 0, 0, 0.161378506274859, 0, 0, 0, 0, 0.143739376399012, 
 0, 0, 0, 0, 0.157239748979002), .Dim = c(4L, 4L), .Dimnames = list(
     c("eta.Vc", "eta.Cl", "eta.Vp", "eta.Q"), c("eta.Vc", "eta.Cl", 
-    "eta.Vp", "eta.Q"))), time = structure(list(saem = 75.7980000000007, 
-    setup = 2.87527000000039, table = 0.0280000000002474, covariance = 0.0280000000002474, 
-    other = 0.523729999999034, logLik = 0.492000000000189), class = "data.frame", row.names = "elapsed"), 
+    "eta.Vp", "eta.Q"))), time = structure(list(saem = 21.485, 
+    setup = 2.865353, table = 0.0180000000000291, covariance = 0.249000000000024, 
+    other = 0.696646999999956, logLik = 3.56600000000003), class = "data.frame", row.names = "elapsed"), 
     objDf = structure(list(OBJF = Inf, AIC = Inf, BIC = Inf, 
         "Log-likelihood" = -Inf, "Condition Number" = 1.68010206242144), row.names = "gauss3_1.6", class = "data.frame")) 

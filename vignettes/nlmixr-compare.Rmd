@@ -200,5 +200,5 @@ f <- function(nlmixrVersion=c("1.1.1.3"), est=c("saem", "focei", "nlme"),
 ```{r}
 nlmixrVersion <- as.character(packageVersion("nlmixr"));
 
-f(nlmixrVersion, c("saem", "focei", "nlme"), "unix")
+f(nlmixrVersion, c("saem", "focei"), "unix")
 ```

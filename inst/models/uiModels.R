@@ -724,10 +724,13 @@ for (opt in opts){
                     }
                     if (subset=="SD"){
                         dat <- datr[datr$SD == 1, ]
+                        dat <- dat[, names(dat) != "SS"];
                     } else if (subset=="MD") {
                         dat <- datr[datr$SD == 0, ]
+                        dat <- dat[, names(dat) != "SS"];
                     } else if (subset=="full"){
                         dat <- datr;
+                        dat <- dat[, names(dat) != "SS"];
                     } else {
                         dat <- datr[datr$SS != 99, ];
                     }
