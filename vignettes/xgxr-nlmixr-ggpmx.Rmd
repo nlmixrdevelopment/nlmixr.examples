@@ -11,7 +11,13 @@ vignette: >
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
-)
+  )
+
+## These options cache the models and the model simulations in R
+## To run the actual models on your system, take the save options off.
+options(nlmixr.save=TRUE,
+        nlmixr.save.dir=system.file(package="nlmixr.examples"));
+
 ```
 
 This shows an example of integrated workflow between `xgxr` `nlmixr`
@@ -26,10 +32,6 @@ library(dplyr)
 library(tidyr)
 library(ggPMX)
 
-## These options cache the models and the model simulations in R
-## To run the actual models on your system, take the save options off.
-options(nlmixr.save=TRUE,
-        nlmixr.save.dir=system.file(package="nlmixr.examples"));
 ```
 
 
@@ -253,6 +255,10 @@ print(cmt2m)
 ## First try log-normal (since the variabilitiy seemed proportional to concentration)
 cmt2fit.logn <- nlmixr(cmt2m, dat, "saem")
 
+plot(augPred(cmt2fit.logn))
+
+addNpde(cmt2fit.logn)
+
 ## Now try proportional
 cmt2fit.prop <- cmt2fit.logn %>%
     update(linCmt() ~ prop(prop.sd)) %>%
@@ -289,4 +295,30 @@ dwplot(list("lognormal"=cmt2fit.logn, "proportional"=cmt2fit.prop), exponentiate
     xgx_scale_x_log10() +
     ggtitle("Comparison between lognormal and proportional models",
             "On backtransformed scales")
+```
+
+# Model Diagnostics with ggPMX
+
+```{r}
+library(ggPMX)
+
+ctr <- pmx_nlmixr(cmt2fit.logn, conts = c("WEIGHTB"), cats="")
+
+## ## Unlike standard tidyverse, the controller is modified by piping plots into it.
+## ctr %>% pmx_plot_dv_ipred
+## ctr %>% pmx_plot_dv_pred
+## ctr %>% pmx_plot_abs_iwres_ipred
+## ctr %>% pmx_plot_individual(1)
+## ctr %>% pmx_plot_iwres_dens
+## ctr %>% pmx_plot_npde_qq
+## ctr %>% pmx_plot_npde_pred
+## ctr %>% pmx_plot_npde_time
+## ctr %>% pmx_plot_eta_qq
+## ctr %>% pmx_plot_vpc
+## ctr %>% pmx_plot_eta_box
+## ctr %>% pmx_plot_eta_hist
+## ctr %>% pmx_plot_eta_matrix
+
+## ctr %>% pmx_report("nlmixr_report","/tmp")
+
 ```
