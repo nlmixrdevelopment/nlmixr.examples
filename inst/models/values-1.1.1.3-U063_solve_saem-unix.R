@@ -5,9 +5,9 @@ expected_values[[runno]] <- list(lik = c(-38506.24, 77034.49, 77109.82), param =
     lVc = 4.21020447272894, lQ = 1.44516836813235, lVp = 3.87852233283189, 
     lKA = -0.0809017570424397, prop.err = 0.198814535890824), 
         SE = c(lCl = 0.0291550493058924, lVc = 0.0282612318111431, 
-        lQ = 0.0621576473473919, lVp = 0.035413424789174, lKA = 0.0374535861574149, 
-        prop.err = NA), "%RSE" = c(2.1670261518479, 0.671255564764171, 
-        4.30106613997653, 0.913064867240741, 46.2951455278868, 
+        lQ = 0.0621576473473919, lVp = 0.0354134247891739, lKA = 0.0374535861574148, 
+        prop.err = NA), "%RSE" = c(2.16702615184789, 0.671255564764172, 
+        4.30106613997653, 0.91306486724074, 46.2951455278868, 
         NA), "Back-transformed" = c(3.83970076387471, 67.3703137937777, 
         4.24256639567045, 48.3527130397054, 0.922284294930803, 
         0.198814535890824), "CI Lower" = c(3.62644050797517, 
@@ -24,10 +24,10 @@ expected_values[[runno]] <- list(lik = c(-38506.24, 77034.49, 77109.82), param =
     0, 0, 0, 0, 0, 0.161973446205591, 0, 0, 0, 0, 0, 0.104271389868319
     ), .Dim = c(5L, 5L), .Dimnames = list(c("eta.Vc", "eta.Cl", 
     "eta.Vp", "eta.Q", "eta.KA"), c("eta.Vc", "eta.Cl", "eta.Vp", 
-    "eta.Q", "eta.KA"))), time = structure(list(saem = 106.656, 
-        setup = 0.233968999999952, table = 0.711000000000013, 
-        cwres = 1.04100000000005, covariance = 0.467999999999961, 
-        other = 0.732031000000063), class = "data.frame", row.names = "elapsed"), 
+    "eta.Q", "eta.KA"))), time = structure(list(saem = 98.92, 
+        setup = 0.326961000000026, table = 0.587999999999965, 
+        cwres = 1.00100000000009, covariance = 0.129000000000019, 
+        other = 0.389038999999983), class = "data.frame", row.names = "elapsed"), 
     objDf = structure(list(OBJF = 64220.8641908348, AIC = 77034.4885730439, 
         BIC = 77109.8158553305, "Log-likelihood" = -38506.2442865219, 
-        "Condition Number" = 7.15468563373642), row.names = "FOCEi", class = "data.frame")) 
+        "Condition Number" = 7.15468563373643), row.names = "FOCEi", class = "data.frame")) 

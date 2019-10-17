@@ -5,11 +5,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>mavoglurant – Physiologically-based PK • nlmixr.examples</title>
+<title>mavoglurant -- Physiologically-based PK • nlmixr.examples</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="mavoglurant – Physiologically-based PK">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
+<script src="../pkgdown.js"></script><meta property="og:title" content="mavoglurant -- Physiologically-based PK">
 <meta property="og:description" content="">
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -30,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">nlmixr.examples</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.1.3</span>
       </span>
     </div>
 
@@ -51,7 +52,7 @@
       <a href="https://nlmixrdevelopment.github.io/nlmixr/articles/running_nlmixr.html">Introduction to Running Nlmixr</a>
     </li>
     <li>
-      <a href="https://nlmixrdevelopment.github.io/nlmixr/articles/multiple-endpoints.html">Using Multiple Endpoints in Nlmixr</a>
+      <a href="../articles/multiple-endpoints.html">Using Multiple Endpoints in Nlmixr</a>
     </li>
     <li class="divider">
     <li class="dropdown-header">Going further</li>
@@ -73,7 +74,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="https://nlmixrdevelopment.github.io/nlmixr/articles/addingCovariances.html">Phenobarbatol with correlations</a>
+      <a href="../articles/addingCovariances.html">Phenobarbatol with correlations</a>
     </li>
     <li class="divider">
     <li class="dropdown-header">Page 2018</li>
@@ -122,15 +123,16 @@
 <!--/.navbar -->
 
       
+
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1>mavoglurant – Physiologically-based PK</h1>
                         <h4 class="author">Wenping Wang</h4>
             
-            <h4 class="date">2019-05-10</h4>
+            <h4 class="date">2019-10-17</h4>
       
-      
+      <small class="dont-index">Source: <a href="https://github.com/nlmixrdevelopment/nlmixr/blob/master/vignettes/mavoglurant.Rmd"><code>vignettes/mavoglurant.Rmd</code></a></small>
       <div class="hidden name"><code>mavoglurant.Rmd</code></div>
 
     </div>
@@ -147,17 +149,9 @@
 <div id="nlmixr-model" class="section level1">
 <h1 class="hasAnchor">
 <a href="#nlmixr-model" class="anchor"></a>nlmixr model</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(nlmixr)
-## These options cache the models and the model simulations in R
-## To run the actual models on your system, take the save options off.
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/options">options</a></span>(<span class="dt">nlmixr.save=</span><span class="ot">TRUE</span>,
-        <span class="dt">nlmixr.save.dir=</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(<span class="dt">package=</span><span class="st">"nlmixr.examples"</span>));
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(nlmixr)
 
-## Note to get the datasets you can use:
-## remotes::install_github("nlmixrdevelopment/nlmixr.examples")
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(nlmixr.examples) ## For nlmixr.examples data
-
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(xpose)
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(xpose)
 <span class="co">#&gt; Loading required package: ggplot2</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Attaching package: 'xpose'</span>
@@ -167,16 +161,16 @@
 <span class="co">#&gt; The following object is masked from 'package:stats':</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;     filter</span>
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(xpose.nlmixr)
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(xpose.nlmixr)
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Attaching package: 'xpose.nlmixr'</span>
 <span class="co">#&gt; The following object is masked from 'package:nlmixr':</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;     vpc</span>
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ggplot2)
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(ggplot2)
 
 pbpk &lt;-<span class="st"> </span><span class="cf">function</span>(){
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/ini">ini</a></span>({
+    <span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/ini.html">ini</a></span>({
         ##theta=exp(c(1.1, .3, 2, 7.6, .003, .3))
         lKbBR =<span class="st"> </span><span class="fl">1.1</span>
         lKbMU =<span class="st"> </span><span class="fl">0.3</span>
@@ -188,13 +182,13 @@ pbpk &lt;-<span class="st"> </span><span class="cf">function</span>(){
         add.err &lt;-<span class="st"> </span><span class="dv">1</span>
         prop.err &lt;-<span class="st"> </span><span class="dv">10</span>
     })
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/model">model</a></span>({
-        KbBR =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(lKbBR)
-        KbMU =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(lKbMU)
-        KbAD =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(lKbAD)
-        CLint=<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(lCLint <span class="op">+</span><span class="st"> </span>eta.LClint)
-        KbBO =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(lKbBO)
-        KbRB =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(lKbRB)
+    <span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/model.html">model</a></span>({
+        KbBR =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(lKbBR)
+        KbMU =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(lKbMU)
+        KbAD =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(lKbAD)
+        CLint=<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(lCLint <span class="op">+</span><span class="st"> </span>eta.LClint)
+        KbBO =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(lKbBO)
+        KbRB =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(lKbRB)
 
         ## Regional blood flows
         CO  =<span class="st"> </span>(<span class="fl">187.00</span><span class="op">*</span>WT<span class="op">^</span><span class="fl">0.81</span>)<span class="op">*</span><span class="dv">60</span><span class="op">/</span><span class="dv">1000</span>;         <span class="co"># Cardiac output (L/h) from White et al (1968)</span>
@@ -237,47 +231,47 @@ pbpk &lt;-<span class="st"> </span><span class="cf">function</span>(){
         fup =<span class="st"> </span><span class="fl">0.028</span>;    <span class="co"># Fraction unbound in plasma</span>
         fub =<span class="st"> </span>fup<span class="op">/</span>BP;   <span class="co"># Fraction unbound in blood</span>
 
-        KbLU =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(<span class="fl">0.8334</span>);
-        KbHT =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(<span class="fl">1.1205</span>);
-        KbSK =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(<span class="op">-</span>.<span class="dv">5238</span>);
-        KbSP =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(<span class="fl">0.3224</span>);
-        KbPA =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(<span class="fl">0.3224</span>);
-        KbLI =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(<span class="fl">1.7604</span>);
-        KbST =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(<span class="fl">0.3224</span>);
-        KbGU =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(<span class="fl">1.2026</span>);
-        KbKI =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(<span class="fl">1.3171</span>);
+        KbLU =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="fl">0.8334</span>);
+        KbHT =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="fl">1.1205</span>);
+        KbSK =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="op">-</span>.<span class="dv">5238</span>);
+        KbSP =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="fl">0.3224</span>);
+        KbPA =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="fl">0.3224</span>);
+        KbLI =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="fl">1.7604</span>);
+        KbST =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="fl">0.3224</span>);
+        KbGU =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="fl">1.2026</span>);
+        KbKI =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="fl">1.3171</span>);
 
         ##-----------------------------------------
         S15 =<span class="st"> </span>VVB<span class="op">*</span>BP<span class="op">/</span><span class="dv">1000</span>;
         C15 =<span class="st"> </span>Venous_Blood<span class="op">/</span>S15
 
         ##-----------------------------------------
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Lungs) =<span class="st"> </span>QLU<span class="op">*</span>(Venous_Blood<span class="op">/</span>VVB <span class="op">-</span><span class="st"> </span>Lungs<span class="op">/</span>KbLU<span class="op">/</span>VLU);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Heart) =<span class="st"> </span>QHT<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Heart<span class="op">/</span>KbHT<span class="op">/</span>VHT);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Brain) =<span class="st"> </span>QBR<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Brain<span class="op">/</span>KbBR<span class="op">/</span>VBR);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Muscles) =<span class="st"> </span>QMU<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Muscles<span class="op">/</span>KbMU<span class="op">/</span>VMU);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Adipose) =<span class="st"> </span>QAD<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Adipose<span class="op">/</span>KbAD<span class="op">/</span>VAD);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Skin) =<span class="st"> </span>QSK<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Skin<span class="op">/</span>KbSK<span class="op">/</span>VSK);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Spleen) =<span class="st"> </span>QSP<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Spleen<span class="op">/</span>KbSP<span class="op">/</span>VSP);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Pancreas) =<span class="st"> </span>QPA<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Pancreas<span class="op">/</span>KbPA<span class="op">/</span>VPA);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Liver) =<span class="st"> </span>QHA<span class="op">*</span>Arterial_Blood<span class="op">/</span>VAB <span class="op">+</span><span class="st"> </span>QSP<span class="op">*</span>Spleen<span class="op">/</span>KbSP<span class="op">/</span>VSP <span class="op">+</span><span class="st"> </span>QPA<span class="op">*</span>Pancreas<span class="op">/</span>KbPA<span class="op">/</span>VPA <span class="op">+</span><span class="st"> </span>QST<span class="op">*</span>Stomach<span class="op">/</span>KbST<span class="op">/</span>VST <span class="op">+</span><span class="st"> </span>QGU<span class="op">*</span>Gut<span class="op">/</span>KbGU<span class="op">/</span>VGU <span class="op">-</span><span class="st"> </span>CLint<span class="op">*</span>fub<span class="op">*</span>Liver<span class="op">/</span>KbLI<span class="op">/</span>VLI <span class="op">-</span><span class="st"> </span>QLI<span class="op">*</span>Liver<span class="op">/</span>KbLI<span class="op">/</span>VLI;
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Stomach) =<span class="st"> </span>QST<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Stomach<span class="op">/</span>KbST<span class="op">/</span>VST);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Gut) =<span class="st"> </span>QGU<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Gut<span class="op">/</span>KbGU<span class="op">/</span>VGU);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Bones) =<span class="st"> </span>QBO<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Bones<span class="op">/</span>KbBO<span class="op">/</span>VBO);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Kidneys) =<span class="st"> </span>QKI<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Kidneys<span class="op">/</span>KbKI<span class="op">/</span>VKI);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Arterial_Blood) =<span class="st"> </span>QLU<span class="op">*</span>(Lungs<span class="op">/</span>KbLU<span class="op">/</span>VLU <span class="op">-</span><span class="st"> </span>Arterial_Blood<span class="op">/</span>VAB);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Venous_Blood) =<span class="st"> </span>QHT<span class="op">*</span>Heart<span class="op">/</span>KbHT<span class="op">/</span>VHT <span class="op">+</span><span class="st"> </span>QBR<span class="op">*</span>Brain<span class="op">/</span>KbBR<span class="op">/</span>VBR <span class="op">+</span><span class="st"> </span>QMU<span class="op">*</span>Muscles<span class="op">/</span>KbMU<span class="op">/</span>VMU <span class="op">+</span><span class="st"> </span>QAD<span class="op">*</span>Adipose<span class="op">/</span>KbAD<span class="op">/</span>VAD <span class="op">+</span><span class="st"> </span>QSK<span class="op">*</span>Skin<span class="op">/</span>KbSK<span class="op">/</span>VSK <span class="op">+</span><span class="st"> </span>QLI<span class="op">*</span>Liver<span class="op">/</span>KbLI<span class="op">/</span>VLI <span class="op">+</span><span class="st"> </span>QBO<span class="op">*</span>Bones<span class="op">/</span>KbBO<span class="op">/</span>VBO <span class="op">+</span><span class="st"> </span>QKI<span class="op">*</span>Kidneys<span class="op">/</span>KbKI<span class="op">/</span>VKI <span class="op">+</span><span class="st"> </span>QRB<span class="op">*</span>Rest_of_Body<span class="op">/</span>KbRB<span class="op">/</span>VRB <span class="op">-</span><span class="st"> </span>QLU<span class="op">*</span>Venous_Blood<span class="op">/</span>VVB;
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Rest_of_Body) =<span class="st"> </span>QRB<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Rest_of_Body<span class="op">/</span>KbRB<span class="op">/</span>VRB);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Lungs) =<span class="st"> </span>QLU<span class="op">*</span>(Venous_Blood<span class="op">/</span>VVB <span class="op">-</span><span class="st"> </span>Lungs<span class="op">/</span>KbLU<span class="op">/</span>VLU);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Heart) =<span class="st"> </span>QHT<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Heart<span class="op">/</span>KbHT<span class="op">/</span>VHT);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Brain) =<span class="st"> </span>QBR<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Brain<span class="op">/</span>KbBR<span class="op">/</span>VBR);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Muscles) =<span class="st"> </span>QMU<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Muscles<span class="op">/</span>KbMU<span class="op">/</span>VMU);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Adipose) =<span class="st"> </span>QAD<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Adipose<span class="op">/</span>KbAD<span class="op">/</span>VAD);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Skin) =<span class="st"> </span>QSK<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Skin<span class="op">/</span>KbSK<span class="op">/</span>VSK);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Spleen) =<span class="st"> </span>QSP<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Spleen<span class="op">/</span>KbSP<span class="op">/</span>VSP);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Pancreas) =<span class="st"> </span>QPA<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Pancreas<span class="op">/</span>KbPA<span class="op">/</span>VPA);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Liver) =<span class="st"> </span>QHA<span class="op">*</span>Arterial_Blood<span class="op">/</span>VAB <span class="op">+</span><span class="st"> </span>QSP<span class="op">*</span>Spleen<span class="op">/</span>KbSP<span class="op">/</span>VSP <span class="op">+</span><span class="st"> </span>QPA<span class="op">*</span>Pancreas<span class="op">/</span>KbPA<span class="op">/</span>VPA <span class="op">+</span><span class="st"> </span>QST<span class="op">*</span>Stomach<span class="op">/</span>KbST<span class="op">/</span>VST <span class="op">+</span><span class="st"> </span>QGU<span class="op">*</span>Gut<span class="op">/</span>KbGU<span class="op">/</span>VGU <span class="op">-</span><span class="st"> </span>CLint<span class="op">*</span>fub<span class="op">*</span>Liver<span class="op">/</span>KbLI<span class="op">/</span>VLI <span class="op">-</span><span class="st"> </span>QLI<span class="op">*</span>Liver<span class="op">/</span>KbLI<span class="op">/</span>VLI;
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Stomach) =<span class="st"> </span>QST<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Stomach<span class="op">/</span>KbST<span class="op">/</span>VST);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Gut) =<span class="st"> </span>QGU<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Gut<span class="op">/</span>KbGU<span class="op">/</span>VGU);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Bones) =<span class="st"> </span>QBO<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Bones<span class="op">/</span>KbBO<span class="op">/</span>VBO);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Kidneys) =<span class="st"> </span>QKI<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Kidneys<span class="op">/</span>KbKI<span class="op">/</span>VKI);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Arterial_Blood) =<span class="st"> </span>QLU<span class="op">*</span>(Lungs<span class="op">/</span>KbLU<span class="op">/</span>VLU <span class="op">-</span><span class="st"> </span>Arterial_Blood<span class="op">/</span>VAB);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Venous_Blood) =<span class="st"> </span>QHT<span class="op">*</span>Heart<span class="op">/</span>KbHT<span class="op">/</span>VHT <span class="op">+</span><span class="st"> </span>QBR<span class="op">*</span>Brain<span class="op">/</span>KbBR<span class="op">/</span>VBR <span class="op">+</span><span class="st"> </span>QMU<span class="op">*</span>Muscles<span class="op">/</span>KbMU<span class="op">/</span>VMU <span class="op">+</span><span class="st"> </span>QAD<span class="op">*</span>Adipose<span class="op">/</span>KbAD<span class="op">/</span>VAD <span class="op">+</span><span class="st"> </span>QSK<span class="op">*</span>Skin<span class="op">/</span>KbSK<span class="op">/</span>VSK <span class="op">+</span><span class="st"> </span>QLI<span class="op">*</span>Liver<span class="op">/</span>KbLI<span class="op">/</span>VLI <span class="op">+</span><span class="st"> </span>QBO<span class="op">*</span>Bones<span class="op">/</span>KbBO<span class="op">/</span>VBO <span class="op">+</span><span class="st"> </span>QKI<span class="op">*</span>Kidneys<span class="op">/</span>KbKI<span class="op">/</span>VKI <span class="op">+</span><span class="st"> </span>QRB<span class="op">*</span>Rest_of_Body<span class="op">/</span>KbRB<span class="op">/</span>VRB <span class="op">-</span><span class="st"> </span>QLU<span class="op">*</span>Venous_Blood<span class="op">/</span>VVB;
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Rest_of_Body) =<span class="st"> </span>QRB<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Rest_of_Body<span class="op">/</span>KbRB<span class="op">/</span>VRB);
 
         C15 <span class="op">~</span><span class="st"> </span><span class="kw">add</span>(add.err) <span class="op">+</span><span class="st"> </span><span class="kw">prop</span>(prop.err)
     })
 }
 
-dat =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/read.table">read.csv</a></span>(<span class="st">"Mavoglurant_A2121_nmpk.csv"</span>)
-dat<span class="op">$</span>occ =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unlist">unlist</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/with">with</a></span>(dat, <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/tapply">tapply</a></span>(EVID, ID, <span class="cf">function</span>(x) <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cumsum">cumsum</a></span>(x<span class="op">&gt;</span><span class="dv">0</span>))))
-dat =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/subset">subset</a></span>(dat, occ<span class="op">==</span><span class="dv">1</span>)
-dat =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/subset">subset</a></span>(dat, ID<span class="op">&lt;</span><span class="dv">812</span>) ## First 20
-dat =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/subset">subset</a></span>(dat, EVID<span class="op">&gt;</span><span class="dv">0</span> <span class="op">|</span><span class="st"> </span>DV<span class="op">&gt;</span><span class="dv">0</span>)
+dat =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span>(<span class="st">"Mavoglurant_A2121_nmpk.csv"</span>)
+dat<span class="op">$</span>occ =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/with.html">with</a></span>(dat, <span class="kw"><a href="https://rdrr.io/r/base/tapply.html">tapply</a></span>(EVID, ID, <span class="cf">function</span>(x) <span class="kw"><a href="https://rdrr.io/r/base/cumsum.html">cumsum</a></span>(x<span class="op">&gt;</span><span class="dv">0</span>))))
+dat =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/subset.html">subset</a></span>(dat, occ<span class="op">==</span><span class="dv">1</span>)
+dat =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/subset.html">subset</a></span>(dat, ID<span class="op">&lt;</span><span class="dv">812</span>) ## First 20
+dat =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/subset.html">subset</a></span>(dat, EVID<span class="op">&gt;</span><span class="dv">0</span> <span class="op">|</span><span class="st"> </span>DV<span class="op">&gt;</span><span class="dv">0</span>)
 dat<span class="op">$</span>CMT[dat<span class="op">$</span>CMT <span class="op">==</span><span class="st"> </span><span class="dv">0</span>]  &lt;-<span class="st"> </span><span class="dv">1</span>;
 dat<span class="op">$</span>CMT[dat<span class="op">$</span>EVID <span class="op">==</span><span class="st"> </span><span class="dv">1</span>]  &lt;-<span class="st"> "Venous_Blood"</span> ## Compartment dosed to is Venous Blood
 dat<span class="op">$</span>CMT[dat<span class="op">$</span>EVID <span class="op">!=</span><span class="st"> </span><span class="dv">1</span>]  &lt;-<span class="st"> "C15"</span> ## Observing C15
@@ -286,55 +280,54 @@ gofs &lt;-<span class="st"> </span><span class="cf">function</span>(fit){
     ################################################################################
     ## Standard plots
     ################################################################################
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(fit);
-    fit &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/addCwres">addCwres</a></span>(fit);
+    <span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(fit);
 
-    xpdb &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/xpose.nlmixr/topics/xpose_data_nlmixr">xpose_data_nlmixr</a></span>(fit) ## Convert to nlmixr object
+    xpdb &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/xpose.nlmixr/man/xpose_data_nlmixr.html">xpose_data_nlmixr</a></span>(fit) ## Convert to nlmixr object
 
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/xpose/topics/dv_vs_pred">dv_vs_pred</a></span>(xpdb) <span class="op">+</span>
-<span class="st">          </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">ylab</a></span>(<span class="st">"Observed Mavoglurant Concentrations (ng/mL)"</span>) <span class="op">+</span>
-<span class="st">          </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">xlab</a></span>(<span class="st">"Population Predicted Mavoglurant Concentrations (ng/mL)"</span>));
+    <span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/xpose/man/dv_vs_pred.html">dv_vs_pred</a></span>(xpdb) <span class="op">+</span>
+<span class="st">          </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Observed Mavoglurant Concentrations (ng/mL)"</span>) <span class="op">+</span>
+<span class="st">          </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Population Predicted Mavoglurant Concentrations (ng/mL)"</span>));
 
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/xpose/topics/dv_vs_pred">dv_vs_ipred</a></span>(xpdb) <span class="op">+</span>
-<span class="st">          </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">ylab</a></span>(<span class="st">"Observed Mavoglurant Concentrations (ng/mL)"</span>) <span class="op">+</span>
-<span class="st">          </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">xlab</a></span>(<span class="st">"Individual Predicted Mavoglurant Concentrations (ng/mL)"</span>));
+    <span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/xpose/man/dv_vs_pred.html">dv_vs_ipred</a></span>(xpdb) <span class="op">+</span>
+<span class="st">          </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Observed Mavoglurant Concentrations (ng/mL)"</span>) <span class="op">+</span>
+<span class="st">          </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Individual Predicted Mavoglurant Concentrations (ng/mL)"</span>));
 
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/xpose/topics/res_vs_pred">res_vs_pred</a></span>(xpdb) <span class="op">+</span>
-<span class="st">          </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">ylab</a></span>(<span class="st">"Conditional Weighted Residuals"</span>) <span class="op">+</span>
-<span class="st">          </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">xlab</a></span>(<span class="st">"Population Predicted Mavoglurant Concentrations (ng/mL)"</span>));
+    <span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/xpose/man/res_vs_pred.html">res_vs_pred</a></span>(xpdb) <span class="op">+</span>
+<span class="st">          </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Conditional Weighted Residuals"</span>) <span class="op">+</span>
+<span class="st">          </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Population Predicted Mavoglurant Concentrations (ng/mL)"</span>));
 
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/xpose/topics/res_vs_idv">res_vs_idv</a></span>(xpdb) <span class="op">+</span>
-<span class="st">          </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">ylab</a></span>(<span class="st">"Conditional Weighted Residuals"</span>) <span class="op">+</span>
-<span class="st">          </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">xlab</a></span>(<span class="st">"Time (h)"</span>));
+    <span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/xpose/man/res_vs_idv.html">res_vs_idv</a></span>(xpdb) <span class="op">+</span>
+<span class="st">          </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Conditional Weighted Residuals"</span>) <span class="op">+</span>
+<span class="st">          </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Time (h)"</span>));
 
-    <span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/NULL">is.null</a></span>(fit<span class="op">$</span>saem)){
-        <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/xpose/topics/minimization_plots">prm_vs_iteration</a></span>(xpdb));
+    <span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/NULL.html">is.null</a></span>(fit<span class="op">$</span>saem)){
+        <span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/xpose/man/minimization_plots.html">prm_vs_iteration</a></span>(xpdb));
     }
 
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/xpose/topics/res_vs_idv">absval_res_vs_idv</a></span>(xpdb, <span class="dt">res =</span> <span class="st">'IWRES'</span>) <span class="op">+</span>
-<span class="st">          </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">ylab</a></span>(<span class="st">"Individual Weighted Residuals"</span>) <span class="op">+</span>
-<span class="st">          </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">xlab</a></span>(<span class="st">"Time (h)"</span>))
+    <span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/xpose/man/res_vs_idv.html">absval_res_vs_idv</a></span>(xpdb, <span class="dt">res =</span> <span class="st">'IWRES'</span>) <span class="op">+</span>
+<span class="st">          </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Individual Weighted Residuals"</span>) <span class="op">+</span>
+<span class="st">          </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Time (h)"</span>))
 
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/xpose/topics/res_vs_pred">absval_res_vs_pred</a></span>(xpdb, <span class="dt">res =</span> <span class="st">'IWRES'</span>) <span class="op">+</span>
-<span class="st">          </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">ylab</a></span>(<span class="st">"Individual Weighted Residuals"</span>) <span class="op">+</span>
-<span class="st">          </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">xlab</a></span>(<span class="st">"Population Predicted Mavoglurant Concentrations (ng/mL)"</span>))
+    <span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/xpose/man/res_vs_pred.html">absval_res_vs_pred</a></span>(xpdb, <span class="dt">res =</span> <span class="st">'IWRES'</span>) <span class="op">+</span>
+<span class="st">          </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Individual Weighted Residuals"</span>) <span class="op">+</span>
+<span class="st">          </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Population Predicted Mavoglurant Concentrations (ng/mL)"</span>))
 
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/xpose/topics/ind_plots">ind_plots</a></span>(xpdb, <span class="dt">nrow=</span><span class="dv">3</span>, <span class="dt">ncol=</span><span class="dv">4</span>) <span class="op">+</span>
-<span class="st">          </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">ylab</a></span>(<span class="st">"Predicted and Observed Mavoglurant Concentrations (ng/mL)"</span>) <span class="op">+</span>
-<span class="st">          </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">xlab</a></span>(<span class="st">"Time (h)"</span>))
+    <span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/xpose/man/ind_plots.html">ind_plots</a></span>(xpdb, <span class="dt">nrow=</span><span class="dv">3</span>, <span class="dt">ncol=</span><span class="dv">4</span>) <span class="op">+</span>
+<span class="st">          </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Predicted and Observed Mavoglurant Concentrations (ng/mL)"</span>) <span class="op">+</span>
+<span class="st">          </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Time (h)"</span>))
 
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/xpose/topics/distrib_plot">res_distrib</a></span>(xpdb) <span class="op">+</span>
-<span class="st">          </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">ylab</a></span>(<span class="st">"Density"</span>) <span class="op">+</span>
-<span class="st">          </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">xlab</a></span>(<span class="st">"Conditional Weighted Residuals"</span>));
+    <span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/xpose/man/distrib_plot.html">res_distrib</a></span>(xpdb) <span class="op">+</span>
+<span class="st">          </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Density"</span>) <span class="op">+</span>
+<span class="st">          </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Conditional Weighted Residuals"</span>));
     ##Visual Predictive Checks
-    f1 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/vpc_ui">vpc.ui</a></span>(fit,<span class="dt">n=</span><span class="dv">500</span>,<span class="dt">stratify=</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"dose"</span>), <span class="dt">show=</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(<span class="dt">obs_dv=</span>T), <span class="dt">log_y=</span><span class="ot">TRUE</span>,
-           <span class="dt">bins =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>),
+    f1 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/vpc_ui.html">vpc.ui</a></span>(fit,<span class="dt">n=</span><span class="dv">500</span>,<span class="dt">stratify=</span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"dose"</span>), <span class="dt">show=</span><span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="dt">obs_dv=</span>T), <span class="dt">log_y=</span><span class="ot">TRUE</span>,
+           <span class="dt">bins =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>),
            <span class="dt">ylab =</span> <span class="st">"Mavoglurant Concentrations (ng/mL)"</span>,
            <span class="dt">xlab =</span> <span class="st">"Time (hours)"</span>)
-    f2 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/vpc_ui">vpc.ui</a></span>(fit,<span class="dt">n=</span><span class="dv">500</span>, <span class="dt">show=</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(<span class="dt">obs_dv=</span>T), <span class="dt">bins =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>), <span class="dt">log_y=</span><span class="ot">TRUE</span>,
+    f2 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/vpc_ui.html">vpc.ui</a></span>(fit,<span class="dt">n=</span><span class="dv">500</span>, <span class="dt">show=</span><span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="dt">obs_dv=</span>T), <span class="dt">bins =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>), <span class="dt">log_y=</span><span class="ot">TRUE</span>,
                  <span class="dt">ylab =</span> <span class="st">"Mavoglurant Concentrations (ng/mL)"</span>, <span class="dt">xlab =</span> <span class="st">"Time (hours)"</span>)
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(f1)
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(f2)
+    <span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(f1)
+    <span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(f2)
 }</code></pre></div>
 </div>
 <div id="saem" class="section level1">
@@ -343,51 +336,38 @@ gofs &lt;-<span class="st"> </span><span class="cf">function</span>(fit){
 <div id="fit-addprop-saem" class="section level2">
 <h2 class="hasAnchor">
 <a href="#fit-addprop-saem" class="anchor"></a>Fit add+prop SAEM</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fit.addProp.S &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/nlmixr">nlmixr</a></span>(pbpk, dat, <span class="dt">est=</span><span class="st">"saem"</span>)
-<span class="co">#&gt; Loading model already run (/home/matt/R/x86_64-pc-linux-gnu-library/3.5/nlmixr.examples/nlmixr-pbpk-dat-saem-6e7e039679a37634c1367f96b7c46c93.rds)</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fit.addProp.S &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/nlmixr.html">nlmixr</a></span>(pbpk, dat, <span class="dt">est=</span><span class="st">"saem"</span>, <span class="dt">table=</span><span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="dt">cwres=</span><span class="ot">TRUE</span>, <span class="dt">npde=</span><span class="ot">TRUE</span>))
+<span class="co">#&gt; Loading model already run (/tmp/RtmpXKdUFj/temp_libpath58be457a881a/nlmixr.examples/nlmixr-pbpk-dat-saem-699583adb0bac0c648b4790d4c6c6ae6.rds)</span>
+<span class="co">#&gt; Warning in lapply(X = X, FUN = FUN, ...): ID missing in parameters dataset;</span>
+<span class="co">#&gt;  Parameters are assumed to have the same order as the IDs in the event dataset</span>
 
-<span class="kw">gofs</span>(fit.addProp.S);</code></pre></div>
-<p><img src="mavoglurant_files/figure-html/unnamed-chunk-2-1.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-2.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-3.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-4.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-5.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-6.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-7.png" width="700"></p>
-<pre><code>#&gt; Needed Covariates:
-#&gt; [1] "WT"
-#&gt; Calculating residuals/tables
-#&gt; done.</code></pre>
-<p><img src="mavoglurant_files/figure-html/unnamed-chunk-2-8.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-9.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-10.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-11.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-12.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-13.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-14.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-15.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-16.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-17.png" width="700"></p>
-<pre><code>#&gt; Compiling VPC model...
-#&gt; done
-#&gt; done (4.10 sec)
-#&gt; Warning in data.frame(..., check.names = FALSE): row names were found from
-#&gt; a short variable and have been discarded
-#&gt; Compiling VPC model...
-#&gt; done
-#&gt; done (4.47 sec)</code></pre>
-<p><img src="mavoglurant_files/figure-html/unnamed-chunk-2-18.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-19.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-20.png" width="700"></p>
+<span class="kw">gofs</span>(fit.addProp.S);
+<span class="co">#&gt; Warning: `complete_()` is deprecated as of tidyr 1.0.0.</span>
+<span class="co">#&gt; Please use `complete()` instead.</span>
+<span class="co">#&gt; This warning is displayed once per session.</span>
+<span class="co">#&gt; Call `lifecycle::last_warnings()` to see where this warning was generated.</span></code></pre></div>
+<p><img src="mavoglurant_files/figure-html/unnamed-chunk-2-1.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-2.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-3.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-4.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-5.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-6.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-7.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-8.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-9.png" width="700"></p>
+<pre><code>#&gt; Loading vpc already run (/tmp/RtmpXKdUFj/temp_libpath58be457a881a/nlmixr.examples/nlmixr-vpc-pbpk-dat--1b40dbdb827d297602b0fce99e4f35f5.rds)
+#&gt; Loading vpc already run (/tmp/RtmpXKdUFj/temp_libpath58be457a881a/nlmixr.examples/nlmixr-vpc-pbpk-dat--119a36afbe069fea277d7a7b784558cf.rds)</code></pre>
+<p><img src="mavoglurant_files/figure-html/unnamed-chunk-2-10.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-11.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-2-12.png" width="700"></p>
 </div>
 <div id="change-error-to-lognormal" class="section level2">
 <h2 class="hasAnchor">
 <a href="#change-error-to-lognormal" class="anchor"></a>Change error to lognormal</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fit.lnorm.S &lt;-<span class="st"> </span>pbpk <span class="op">%&gt;%</span>
-<span class="st">    </span><span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/model">model</a></span>({C15 <span class="op">~</span><span class="st"> </span><span class="kw">lnorm</span>(lnorm.err)}) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Change C15 to be log-normally distributed</span>
-<span class="st">    </span><span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/nlmixr">nlmixr</a></span>(dat,<span class="dt">est=</span><span class="st">"saem"</span>) <span class="co"># Requires data since pining from pbpk model</span>
-<span class="co">#&gt; Loading model already run (/home/matt/R/x86_64-pc-linux-gnu-library/3.5/nlmixr.examples/nlmixr-saem-c1f116cb15f985d19f0fcfc6ca548931.rds)</span></code></pre></div>
+<span class="st">    </span><span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/model.html">model</a></span>({C15 <span class="op">~</span><span class="st"> </span><span class="kw">lnorm</span>(lnorm.err)}) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Change C15 to be log-normally distributed</span>
+<span class="st">    </span>## Requires data since piping from pbpk model
+<span class="st">    </span><span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/nlmixr.html">nlmixr</a></span>(dat,<span class="dt">est=</span><span class="st">"saem"</span>, <span class="dt">table=</span><span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="dt">cwres=</span><span class="ot">TRUE</span>, <span class="dt">npde=</span><span class="ot">TRUE</span>))
+<span class="co">#&gt; Loading model already run (/tmp/RtmpXKdUFj/temp_libpath58be457a881a/nlmixr.examples/nlmixr-saem-9570ef3429e09e1bdbd76e4b0fb7af69.rds)</span>
+<span class="co">#&gt; Warning in lapply(X = X, FUN = FUN, ...): ID missing in parameters dataset;</span>
+<span class="co">#&gt;  Parameters are assumed to have the same order as the IDs in the event dataset</span></code></pre></div>
 <p><strong>NOTE:</strong> lognormal distribution AIC/loglik/etc is on normal scale. Therefore, you can compare the AICs between fit.lnorm and fit.addProp since they are calculated on the same scale.</p>
 <p>In this case you can see that the AIC for the log-normal model is better than the AIC for the addProp model.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">gofs</span>(fit.lnorm.S);</code></pre></div>
-<p><img src="mavoglurant_files/figure-html/unnamed-chunk-4-1.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-2.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-3.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-4.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-5.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-6.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-7.png" width="700"></p>
-<pre><code>#&gt; Needed Covariates:
-#&gt; [1] "WT"
-#&gt; Calculating residuals/tables
-#&gt; done.</code></pre>
-<p><img src="mavoglurant_files/figure-html/unnamed-chunk-4-8.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-9.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-10.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-11.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-12.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-13.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-14.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-15.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-16.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-17.png" width="700"></p>
-<pre><code>#&gt; Compiling VPC model...
-#&gt; done
-#&gt; done (4.83 sec)
-#&gt; Warning in data.frame(..., check.names = FALSE): row names were found from
-#&gt; a short variable and have been discarded
-#&gt; Compiling VPC model...
-#&gt; done
-#&gt; done (4.89 sec)</code></pre>
-<p><img src="mavoglurant_files/figure-html/unnamed-chunk-4-18.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-19.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-20.png" width="700"></p>
+<p><img src="mavoglurant_files/figure-html/unnamed-chunk-4-1.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-2.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-3.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-4.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-5.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-6.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-7.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-8.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-9.png" width="700"></p>
+<pre><code>#&gt; Loading vpc already run (/tmp/RtmpXKdUFj/temp_libpath58be457a881a/nlmixr.examples/nlmixr-vpc--584acd366a954b1ade6d444347b5f89f.rds)
+#&gt; Loading vpc already run (/tmp/RtmpXKdUFj/temp_libpath58be457a881a/nlmixr.examples/nlmixr-vpc--8a1b72792363c5c8a00b55dc589793fa.rds)</code></pre>
+<p><img src="mavoglurant_files/figure-html/unnamed-chunk-4-10.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-11.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-4-12.png" width="700"></p>
 </div>
 </div>
 <div id="piping-to-focei" class="section level1">
@@ -398,45 +378,52 @@ gofs &lt;-<span class="st"> </span><span class="cf">function</span>(fit){
 <h2 class="hasAnchor">
 <a href="#additive-proportional" class="anchor"></a>Additive + Proportional</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fit.addProp.F &lt;-<span class="st"> </span>fit.addProp.S <span class="op">%&gt;%</span>
-<span class="st">    </span><span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/nlmixr">nlmixr</a></span>(<span class="dt">est=</span><span class="st">"focei"</span>); ## Since this was a model pipline, the data
-<span class="co">#&gt; Loading model already run (/home/matt/R/x86_64-pc-linux-gnu-library/3.5/nlmixr.examples/nlmixr-pbpk-dat-focei-2360797054932d150b0bc8507a2c4685.rds)</span>
-                         ## remains the same as the last fit.
+<span class="st">    </span><span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/nlmixr.html">nlmixr</a></span>(<span class="dt">est=</span><span class="st">"focei"</span>, <span class="dt">table=</span><span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="dt">cwres=</span><span class="ot">TRUE</span>, <span class="dt">npde=</span><span class="ot">TRUE</span>));
+<span class="co">#&gt; Loading model already run (/tmp/RtmpXKdUFj/temp_libpath58be457a881a/nlmixr.examples/nlmixr-pbpk-dat-focei-c4d353e3425a7b7c59f2f749be162825.rds)</span>
+<span class="co">#&gt; Warning in lapply(X = X, FUN = FUN, ...): ID missing in parameters dataset;</span>
+<span class="co">#&gt;  Parameters are assumed to have the same order as the IDs in the event dataset</span>
+<span class="co">#&gt; Warning in lapply(X = X, FUN = FUN, ...): Initial ETAs were nudged; (Can</span>
+<span class="co">#&gt; control by foceiControl(etaNudge=.))</span>
+<span class="co">#&gt; Warning in lapply(X = X, FUN = FUN, ...): ETAs were reset to zero during</span>
+<span class="co">#&gt; optimization; (Can control by foceiControl(resetEtaP=.))</span>
+<span class="co">#&gt; Warning in lapply(X = X, FUN = FUN, ...): Gradient problems with initial</span>
+<span class="co">#&gt; estimate and covariance; see $scaleInfo</span>
+## Since this was a model pipline, the data
+## remains the same as the last fit.
+
 <span class="kw">gofs</span>(fit.addProp.F);</code></pre></div>
-<p><img src="mavoglurant_files/figure-html/unnamed-chunk-5-1.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-2.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-3.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-4.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-5.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-6.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-7.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-8.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-9.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-10.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-11.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-12.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-13.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-14.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-15.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-16.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-17.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-18.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-19.png" width="700"></p>
-<pre><code>#&gt; Compiling VPC model...
-#&gt; done
-#&gt; done (4.19 sec)
-#&gt; Warning in data.frame(..., check.names = FALSE): row names were found from
-#&gt; a short variable and have been discarded
-#&gt; Compiling VPC model...
-#&gt; done
-#&gt; done (4.13 sec)</code></pre>
-<p><img src="mavoglurant_files/figure-html/unnamed-chunk-5-20.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-21.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-22.png" width="700"></p>
+<p><img src="mavoglurant_files/figure-html/unnamed-chunk-5-1.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-2.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-3.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-4.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-5.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-6.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-7.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-8.png" width="700"></p>
+<pre><code>#&gt; Loading vpc already run (/tmp/RtmpXKdUFj/temp_libpath58be457a881a/nlmixr.examples/nlmixr-vpc-pbpk-dat--ebb9ebd29f5f84acdaa1034c58c88f11.rds)
+#&gt; Loading vpc already run (/tmp/RtmpXKdUFj/temp_libpath58be457a881a/nlmixr.examples/nlmixr-vpc-pbpk-dat--4a83accb8ed983ad01aec28903a69e34.rds)</code></pre>
+<p><img src="mavoglurant_files/figure-html/unnamed-chunk-5-9.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-10.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-5-11.png" width="700"></p>
 </div>
 <div id="lognoral" class="section level2">
 <h2 class="hasAnchor">
 <a href="#lognoral" class="anchor"></a>Lognoral</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fit.lnorm.F &lt;-<span class="st"> </span>fit.addProp.F <span class="op">%&gt;%</span>
-<span class="st">    </span><span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/model">model</a></span>({C15 <span class="op">~</span><span class="st"> </span><span class="kw">lnorm</span>(lnorm.err)}) <span class="op">%&gt;%</span>
-<span class="st">    </span><span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/nlmixr">nlmixr</a></span>(<span class="dt">est=</span><span class="st">"focei"</span>); ## In this model pipline we are changing the fit method to focei.
-<span class="co">#&gt; Loading model already run (/home/matt/R/x86_64-pc-linux-gnu-library/3.5/nlmixr.examples/nlmixr-focei-1bcc21b514be5224431362bc688180b2.rds)</span>
+<span class="st">    </span><span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/model.html">model</a></span>({C15 <span class="op">~</span><span class="st"> </span><span class="kw">lnorm</span>(lnorm.err)}) <span class="op">%&gt;%</span>
+<span class="st">    </span><span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/nlmixr.html">nlmixr</a></span>(<span class="dt">est=</span><span class="st">"focei"</span>, <span class="dt">table=</span><span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="dt">cwres=</span><span class="ot">TRUE</span>, <span class="dt">npde=</span><span class="ot">TRUE</span>));
+<span class="co">#&gt; Loading model already run (/tmp/RtmpXKdUFj/temp_libpath58be457a881a/nlmixr.examples/nlmixr-focei-6220db148acc28521ed91be821211b1e.rds)</span>
+<span class="co">#&gt; Warning in lapply(X = X, FUN = FUN, ...): ID missing in parameters dataset;</span>
+<span class="co">#&gt;  Parameters are assumed to have the same order as the IDs in the event dataset</span>
+<span class="co">#&gt; Warning in lapply(X = X, FUN = FUN, ...): Initial ETAs were nudged; (Can</span>
+<span class="co">#&gt; control by foceiControl(etaNudge=.))</span>
+<span class="co">#&gt; Warning in lapply(X = X, FUN = FUN, ...): ETAs were reset to zero during</span>
+<span class="co">#&gt; optimization; (Can control by foceiControl(resetEtaP=.))</span>
+<span class="co">#&gt; Warning in lapply(X = X, FUN = FUN, ...): Gradient problems with initial</span>
+<span class="co">#&gt; estimate and covariance; see $scaleInfo</span>
+## In this model pipline we are changing the fit method to focei.
 
 <span class="kw">gofs</span>(fit.lnorm.F);</code></pre></div>
-<p><img src="mavoglurant_files/figure-html/unnamed-chunk-6-1.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-2.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-3.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-4.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-5.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-6.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-7.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-8.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-9.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-10.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-11.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-12.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-13.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-14.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-15.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-16.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-17.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-18.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-19.png" width="700"></p>
-<pre><code>#&gt; Compiling VPC model...
-#&gt; done
-#&gt; done (4.42 sec)
-#&gt; Warning in data.frame(..., check.names = FALSE): row names were found from
-#&gt; a short variable and have been discarded
-#&gt; Compiling VPC model...
-#&gt; done
-#&gt; done (4.30 sec)</code></pre>
-<p><img src="mavoglurant_files/figure-html/unnamed-chunk-6-20.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-21.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-22.png" width="700"> # Traditional lognormal estimates are identical</p>
+<p><img src="mavoglurant_files/figure-html/unnamed-chunk-6-1.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-2.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-3.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-4.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-5.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-6.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-7.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-8.png" width="700"></p>
+<pre><code>#&gt; Loading vpc already run (/tmp/RtmpXKdUFj/temp_libpath58be457a881a/nlmixr.examples/nlmixr-vpc--9eb12e1c9cae6478af6d9a2689720c3a.rds)
+#&gt; Loading vpc already run (/tmp/RtmpXKdUFj/temp_libpath58be457a881a/nlmixr.examples/nlmixr-vpc--de1ad949829fa584a7318449ec45ad5d.rds)</code></pre>
+<p><img src="mavoglurant_files/figure-html/unnamed-chunk-6-9.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-10.png" width="700"><img src="mavoglurant_files/figure-html/unnamed-chunk-6-11.png" width="700"> # Traditional lognormal estimates are identical</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">datL  &lt;-<span class="st"> </span>dat
-datL<span class="op">$</span>DV &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">log</a></span>(datL<span class="op">$</span>DV);
+datL<span class="op">$</span>DV &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">log</a></span>(datL<span class="op">$</span>DV);
 
 pbpkL &lt;-<span class="st"> </span><span class="cf">function</span>(){
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/ini">ini</a></span>({
+    <span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/ini.html">ini</a></span>({
         ##theta=exp(c(1.1, .3, 2, 7.6, .003, .3))
         lKbBR =<span class="st"> </span><span class="fl">1.1</span>
         lKbMU =<span class="st"> </span><span class="fl">0.3</span>
@@ -447,13 +434,13 @@ pbpkL &lt;-<span class="st"> </span><span class="cf">function</span>(){
         eta.LClint <span class="op">~</span><span class="st"> </span><span class="dv">4</span>
         add.err &lt;-<span class="st"> </span><span class="dv">1</span>
     })
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/model">model</a></span>({
-        KbBR =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(lKbBR)
-        KbMU =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(lKbMU)
-        KbAD =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(lKbAD)
-        CLint=<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(lCLint <span class="op">+</span><span class="st"> </span>eta.LClint)
-        KbBO =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(lKbBO)
-        KbRB =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(lKbRB)
+    <span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/model.html">model</a></span>({
+        KbBR =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(lKbBR)
+        KbMU =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(lKbMU)
+        KbAD =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(lKbAD)
+        CLint=<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(lCLint <span class="op">+</span><span class="st"> </span>eta.LClint)
+        KbBO =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(lKbBO)
+        KbRB =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(lKbRB)
 
         ## Regional blood flows
         CO  =<span class="st"> </span>(<span class="fl">187.00</span><span class="op">*</span>WT<span class="op">^</span><span class="fl">0.81</span>)<span class="op">*</span><span class="dv">60</span><span class="op">/</span><span class="dv">1000</span>;         <span class="co"># Cardiac output (L/h) from White et al (1968)</span>
@@ -496,55 +483,58 @@ pbpkL &lt;-<span class="st"> </span><span class="cf">function</span>(){
         fup =<span class="st"> </span><span class="fl">0.028</span>;    <span class="co"># Fraction unbound in plasma</span>
         fub =<span class="st"> </span>fup<span class="op">/</span>BP;   <span class="co"># Fraction unbound in blood</span>
 
-        KbLU =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(<span class="fl">0.8334</span>);
-        KbHT =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(<span class="fl">1.1205</span>);
-        KbSK =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(<span class="op">-</span>.<span class="dv">5238</span>);
-        KbSP =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(<span class="fl">0.3224</span>);
-        KbPA =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(<span class="fl">0.3224</span>);
-        KbLI =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(<span class="fl">1.7604</span>);
-        KbST =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(<span class="fl">0.3224</span>);
-        KbGU =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(<span class="fl">1.2026</span>);
-        KbKI =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(<span class="fl">1.3171</span>);
+        KbLU =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="fl">0.8334</span>);
+        KbHT =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="fl">1.1205</span>);
+        KbSK =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="op">-</span>.<span class="dv">5238</span>);
+        KbSP =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="fl">0.3224</span>);
+        KbPA =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="fl">0.3224</span>);
+        KbLI =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="fl">1.7604</span>);
+        KbST =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="fl">0.3224</span>);
+        KbGU =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="fl">1.2026</span>);
+        KbKI =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="fl">1.3171</span>);
 
         ##-----------------------------------------
         S15 =<span class="st"> </span>VVB<span class="op">*</span>BP<span class="op">/</span><span class="dv">1000</span>;
         C15 =<span class="st"> </span>Venous_Blood<span class="op">/</span>S15
-        lnC15 =<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">log</a></span>(C15);
+        lnC15 =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">log</a></span>(C15);
 
         ##-----------------------------------------
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Lungs) =<span class="st"> </span>QLU<span class="op">*</span>(Venous_Blood<span class="op">/</span>VVB <span class="op">-</span><span class="st"> </span>Lungs<span class="op">/</span>KbLU<span class="op">/</span>VLU);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Heart) =<span class="st"> </span>QHT<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Heart<span class="op">/</span>KbHT<span class="op">/</span>VHT);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Brain) =<span class="st"> </span>QBR<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Brain<span class="op">/</span>KbBR<span class="op">/</span>VBR);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Muscles) =<span class="st"> </span>QMU<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Muscles<span class="op">/</span>KbMU<span class="op">/</span>VMU);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Adipose) =<span class="st"> </span>QAD<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Adipose<span class="op">/</span>KbAD<span class="op">/</span>VAD);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Skin) =<span class="st"> </span>QSK<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Skin<span class="op">/</span>KbSK<span class="op">/</span>VSK);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Spleen) =<span class="st"> </span>QSP<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Spleen<span class="op">/</span>KbSP<span class="op">/</span>VSP);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Pancreas) =<span class="st"> </span>QPA<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Pancreas<span class="op">/</span>KbPA<span class="op">/</span>VPA);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Liver) =<span class="st"> </span>QHA<span class="op">*</span>Arterial_Blood<span class="op">/</span>VAB <span class="op">+</span><span class="st"> </span>QSP<span class="op">*</span>Spleen<span class="op">/</span>KbSP<span class="op">/</span>VSP <span class="op">+</span><span class="st"> </span>QPA<span class="op">*</span>Pancreas<span class="op">/</span>KbPA<span class="op">/</span>VPA <span class="op">+</span><span class="st"> </span>QST<span class="op">*</span>Stomach<span class="op">/</span>KbST<span class="op">/</span>VST <span class="op">+</span><span class="st"> </span>QGU<span class="op">*</span>Gut<span class="op">/</span>KbGU<span class="op">/</span>VGU <span class="op">-</span><span class="st"> </span>CLint<span class="op">*</span>fub<span class="op">*</span>Liver<span class="op">/</span>KbLI<span class="op">/</span>VLI <span class="op">-</span><span class="st"> </span>QLI<span class="op">*</span>Liver<span class="op">/</span>KbLI<span class="op">/</span>VLI;
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Stomach) =<span class="st"> </span>QST<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Stomach<span class="op">/</span>KbST<span class="op">/</span>VST);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Gut) =<span class="st"> </span>QGU<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Gut<span class="op">/</span>KbGU<span class="op">/</span>VGU);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Bones) =<span class="st"> </span>QBO<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Bones<span class="op">/</span>KbBO<span class="op">/</span>VBO);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Kidneys) =<span class="st"> </span>QKI<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Kidneys<span class="op">/</span>KbKI<span class="op">/</span>VKI);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Arterial_Blood) =<span class="st"> </span>QLU<span class="op">*</span>(Lungs<span class="op">/</span>KbLU<span class="op">/</span>VLU <span class="op">-</span><span class="st"> </span>Arterial_Blood<span class="op">/</span>VAB);
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Venous_Blood) =<span class="st"> </span>QHT<span class="op">*</span>Heart<span class="op">/</span>KbHT<span class="op">/</span>VHT <span class="op">+</span><span class="st"> </span>QBR<span class="op">*</span>Brain<span class="op">/</span>KbBR<span class="op">/</span>VBR <span class="op">+</span>
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Lungs) =<span class="st"> </span>QLU<span class="op">*</span>(Venous_Blood<span class="op">/</span>VVB <span class="op">-</span><span class="st"> </span>Lungs<span class="op">/</span>KbLU<span class="op">/</span>VLU);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Heart) =<span class="st"> </span>QHT<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Heart<span class="op">/</span>KbHT<span class="op">/</span>VHT);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Brain) =<span class="st"> </span>QBR<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Brain<span class="op">/</span>KbBR<span class="op">/</span>VBR);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Muscles) =<span class="st"> </span>QMU<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Muscles<span class="op">/</span>KbMU<span class="op">/</span>VMU);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Adipose) =<span class="st"> </span>QAD<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Adipose<span class="op">/</span>KbAD<span class="op">/</span>VAD);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Skin) =<span class="st"> </span>QSK<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Skin<span class="op">/</span>KbSK<span class="op">/</span>VSK);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Spleen) =<span class="st"> </span>QSP<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Spleen<span class="op">/</span>KbSP<span class="op">/</span>VSP);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Pancreas) =<span class="st"> </span>QPA<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Pancreas<span class="op">/</span>KbPA<span class="op">/</span>VPA);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Liver) =<span class="st"> </span>QHA<span class="op">*</span>Arterial_Blood<span class="op">/</span>VAB <span class="op">+</span><span class="st"> </span>QSP<span class="op">*</span>Spleen<span class="op">/</span>KbSP<span class="op">/</span>VSP <span class="op">+</span><span class="st"> </span>QPA<span class="op">*</span>Pancreas<span class="op">/</span>KbPA<span class="op">/</span>VPA <span class="op">+</span><span class="st"> </span>QST<span class="op">*</span>Stomach<span class="op">/</span>KbST<span class="op">/</span>VST <span class="op">+</span><span class="st"> </span>QGU<span class="op">*</span>Gut<span class="op">/</span>KbGU<span class="op">/</span>VGU <span class="op">-</span><span class="st"> </span>CLint<span class="op">*</span>fub<span class="op">*</span>Liver<span class="op">/</span>KbLI<span class="op">/</span>VLI <span class="op">-</span><span class="st"> </span>QLI<span class="op">*</span>Liver<span class="op">/</span>KbLI<span class="op">/</span>VLI;
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Stomach) =<span class="st"> </span>QST<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Stomach<span class="op">/</span>KbST<span class="op">/</span>VST);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Gut) =<span class="st"> </span>QGU<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Gut<span class="op">/</span>KbGU<span class="op">/</span>VGU);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Bones) =<span class="st"> </span>QBO<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Bones<span class="op">/</span>KbBO<span class="op">/</span>VBO);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Kidneys) =<span class="st"> </span>QKI<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Kidneys<span class="op">/</span>KbKI<span class="op">/</span>VKI);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Arterial_Blood) =<span class="st"> </span>QLU<span class="op">*</span>(Lungs<span class="op">/</span>KbLU<span class="op">/</span>VLU <span class="op">-</span><span class="st"> </span>Arterial_Blood<span class="op">/</span>VAB);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Venous_Blood) =<span class="st"> </span>QHT<span class="op">*</span>Heart<span class="op">/</span>KbHT<span class="op">/</span>VHT <span class="op">+</span><span class="st"> </span>QBR<span class="op">*</span>Brain<span class="op">/</span>KbBR<span class="op">/</span>VBR <span class="op">+</span>
 <span class="st">            </span>QMU<span class="op">*</span>Muscles<span class="op">/</span>KbMU<span class="op">/</span>VMU <span class="op">+</span><span class="st"> </span>QAD<span class="op">*</span>Adipose<span class="op">/</span>KbAD<span class="op">/</span>VAD <span class="op">+</span>
 <span class="st">            </span>QSK<span class="op">*</span>Skin<span class="op">/</span>KbSK<span class="op">/</span>VSK <span class="op">+</span><span class="st"> </span>QLI<span class="op">*</span>Liver<span class="op">/</span>KbLI<span class="op">/</span>VLI <span class="op">+</span><span class="st"> </span>QBO<span class="op">*</span>Bones<span class="op">/</span>KbBO<span class="op">/</span>VBO <span class="op">+</span>
 <span class="st">            </span>QKI<span class="op">*</span>Kidneys<span class="op">/</span>KbKI<span class="op">/</span>VKI <span class="op">+</span><span class="st"> </span>QRB<span class="op">*</span>Rest_of_Body<span class="op">/</span>KbRB<span class="op">/</span>VRB <span class="op">-</span><span class="st"> </span>QLU<span class="op">*</span>Venous_Blood<span class="op">/</span>VVB;
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(Rest_of_Body) =<span class="st"> </span>QRB<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Rest_of_Body<span class="op">/</span>KbRB<span class="op">/</span>VRB);
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(Rest_of_Body) =<span class="st"> </span>QRB<span class="op">*</span>(Arterial_Blood<span class="op">/</span>VAB <span class="op">-</span><span class="st"> </span>Rest_of_Body<span class="op">/</span>KbRB<span class="op">/</span>VRB);
 
         lnC15 <span class="op">~</span><span class="st"> </span><span class="kw">add</span>(add.err)
     })
 }
 
 fit.lnorm.trans &lt;-<span class="st"> </span>pbpkL <span class="op">%&gt;%</span>
-<span class="st">    </span><span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/nlmixr">nlmixr</a></span>(datL,<span class="dt">est=</span><span class="st">"saem"</span>)
-<span class="co">#&gt; Loading model already run (/home/matt/R/x86_64-pc-linux-gnu-library/3.5/nlmixr.examples/nlmixr-datL-saem-69231b3c7f750b0de4d4005083cbfeb7.rds)</span></code></pre></div>
+<span class="st">    </span><span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/nlmixr.html">nlmixr</a></span>(datL,<span class="dt">est=</span><span class="st">"saem"</span>, <span class="dt">table=</span><span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="dt">npde=</span><span class="ot">TRUE</span>, <span class="dt">cwres=</span><span class="ot">TRUE</span>))
+<span class="co">#&gt; Loading model already run (/tmp/RtmpXKdUFj/temp_libpath58be457a881a/nlmixr.examples/nlmixr-datL-saem-a408e5dbaf1df619264d3b395c892495.rds)</span>
+<span class="co">#&gt; Warning in lapply(X = X, FUN = FUN, ...): ID missing in parameters dataset;</span>
+<span class="co">#&gt;  Parameters are assumed to have the same order as the IDs in the event dataset</span></code></pre></div>
 <p><strong>NOTE:</strong> the estimates are the same but the AIC is different since it is calculated on the log scale.</p>
 </div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+
         <div id="tocnav">
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
@@ -569,17 +559,20 @@ fit.lnorm.trans &lt;-<span class="st"> </span>pbpkL <span class="op">%&gt;%</spa
 </div>
 
 
+
       <footer><div class="copyright">
   <p>Developed by Matthew Fidler, Yuan Xiong, Rik Schoemaker, Justin Wilkins, Mirjam Trame, Richard Hooijmaijers, Teun Post, Wenping Wang.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
+
       </footer>
 </div>
 
   
+
 
   </body>
 </html>

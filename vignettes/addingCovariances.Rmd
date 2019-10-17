@@ -1,11 +1,9 @@
 ---
 title: "Example Model: Phenobarbatol with correlations"
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Example Model: Phenobarbatol with correlations}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output:
+  html_document:
+    self_contained: no
 ---
 
 ```{r, echo=FALSE}
@@ -20,8 +18,7 @@ knitr::opts_chunk$set(
 ## These options cache the models and the model simulations in R
 ## To run the actual models on your system, take the save options off.
 options(nlmixr.save=TRUE,
-        nlmixr.save.dir=system.file(package="nlmixr"));
-
+        nlmixr.save.dir=system.file(package="nlmixr.examples"));
 ```
 
 ![nlmixr](logo.png)
@@ -67,7 +64,7 @@ pheno <- function() {
 ```
 ## Fit with SAEM
 ```{r}
-fit <- nlmixr(pheno, pheno_sd, "saem")
+fit <- nlmixr(pheno, pheno_sd, "saem", table=list(cwres=TRUE, npde=TRUE))
 
 print(fit)
 ```

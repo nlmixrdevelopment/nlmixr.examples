@@ -1,11 +1,9 @@
 ---
 title: "Working with multiple endpoints"
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Working with multiple endpoints}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output:
+  html_document:
+    self_contained: no
 ---
 
 ```{r, echo=FALSE}
@@ -326,7 +324,8 @@ pk.turnover.emax3 <- function() {
 ```
 ## Run the models with SAEM
 ```{r}
-fit.TOS <- nlmixr(pk.turnover.emax3, warfarin, "saem", control=list(print=0));
+fit.TOS <- nlmixr(pk.turnover.emax3, warfarin, "saem", control=list(print=0),
+                  table=list(cwres=TRUE, npde=TRUE));
 print(fit.TOS);
 ```
 ### SAEM Diagnostic plots
@@ -348,7 +347,8 @@ gridExtra::grid.arrange(v1s, v2s)
 
 ```{r}
 ## FOCEi fit/vpcs
-fit.TOF <- nlmixr(pk.turnover.emax3, warfarin, "focei", control=list(print=0));
+fit.TOF <- nlmixr(pk.turnover.emax3, warfarin, "focei", control=list(print=0),
+                  table=list(cwres=TRUE, npde=TRUE));
 ```
 
 ### FOCEi Diagnostic Plots

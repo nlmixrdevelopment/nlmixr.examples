@@ -1,11 +1,9 @@
 ---
 title: "Modifying nlmixr models by piping"
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Running PK models with nlmixr}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output:
+  html_document:
+    self_contained: no
 ---
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
@@ -17,7 +15,6 @@ knitr::opts_chunk$set(
 ## To run the actual models on your system, take the save options off.
 options(nlmixr.save=TRUE,
         nlmixr.save.dir=system.file(package="nlmixr.examples"));
-
 ```
 
 ![nlmixr](logo.png)
@@ -62,9 +59,10 @@ We can try the First-Order Conditional Estimation with Interaction
 (FOCEi) method to find a good solution:
 
 ```{r}
-fit <- nlmixr(one.compartment, theo_sd, est="focei")
+fit <- nlmixr(one.compartment, theo_sd, est="focei",
+              table=list(npde=TRUE, cwres=TRUE))
 
-fit
+print(fit)
 ```
 
 # Changing and fixing parameter values in models
@@ -90,36 +88,36 @@ piping changes to the model:
 ## Example 1 -- Set inital estimate to 0.5 (shown w/posthoc)
 one.ka.0.5 <- fit %>%
     ini(tka=0.5) %>% 
-    nlmixr(est="posthoc")
+    nlmixr(est="posthoc", table=list(cwres=TRUE, npde=TRUE))
 
-one.ka.0.5
+print(one.ka.0.5)
 ```
 
 ```{r}
 ## Example 2 -- Fix tka to 0.5 and re-estimate.
 one.ka.0.5 <- fit %>%
     ini(tka=fix(0.5)) %>%
-    nlmixr(est="focei")
+    nlmixr(est="focei", table=list(cwres=TRUE, npde=TRUE))
 
-one.ka.0.5
+print(one.ka.0.5)
 ```
 
 ```{r}
 ## Example 3 -- Fix tka to model estimated value and re-estimate.
 one.ka.0.5 <- fit %>%
     ini(tka=fix) %>%
-    nlmixr(est="focei")
+    nlmixr(est="focei", table=list(cwres=TRUE, npde=TRUE))
 
-one.ka.0.5
+print(one.ka.0.5)
 ```
 
 ```{r}
 ## Example 4 -- Change tka to 0.7 in orginal model function and then estimate
 one.ka.0.7 <- one.compartment %>%
     ini(tka=0.7) %>% 
-    nlmixr(est="focei")
+    nlmixr(theo_sd, est="focei", table=list(cwres=TRUE, npde=TRUE))
 
-one.ka.0.7
+print(one.ka.0.7)
 ```
 
 # Changing model features
@@ -143,9 +141,9 @@ then re-estimate by piping it to the `nlmixr` function again.
 ## Remove eta.ka on ka
 noEta <- fit %>%
     model(ka <- exp(tka)) %>%
-    nlmixr(est="focei")
+    nlmixr(est="focei", table=list(cwres=TRUE, npde=TRUE))
 
-noEta
+print(noEta)
 ```
 
 Of course you could also add an eta on a parameter in the same way;
@@ -154,9 +152,9 @@ Of course you could also add an eta on a parameter in the same way;
 addBackKa <- noEta %>%
     model({ka <- exp(tka + bsv.ka)}) %>%
     ini(bsv.ka=0.1) %>%
-    nlmixr(est="focei")
+    nlmixr(est="focei", table=list(cwres=TRUE, npde=TRUE))
 
-addBackKa
+print(addBackKa)
 ```
 
 You can see the name change by examining the `omega` matrix:
@@ -187,9 +185,9 @@ parameters:
 wt70 <- fit %>% ## FIXME could be based on if it finds the covarite in the last used nlmixr data.
     model({cl <- exp(tcl + eta.cl)*(WT/70)^covWtPow}) %>%
     ini(covWtPow=fix(0.75)) %>%
-    nlmixr(est="focei")
+    nlmixr(est="focei", table=list(cwres=TRUE, npde=TRUE))
 
-wt70
+print(wt70)
 ```
 
 ## Changing residual errors
@@ -205,7 +203,7 @@ d$DV[d$EVID == 0 & d$DV == 0] <- 0.0150
 addPropModel <- fit %>%
     model({cp ~ add(add.err)+prop(prop.err)}) %>%
     ini(prop.err=0.1) %>%
-    nlmixr(d,est="focei")
+    nlmixr(d,est="focei", table=list(cwres=TRUE, npde=TRUE))
 
-addPropModel
+print(addPropModel)
 ```

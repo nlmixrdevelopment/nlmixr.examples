@@ -4,7 +4,7 @@ NA), sigma = c(prop.err = 0.19639), parFixedDf = structure(list(
     Estimate = c(lCl = 1.39602345577185, lVc = 4.21689379899576, 
     lKA = 0.0162967016686301, prop.err = 0.196387395264732), 
     SE = c(lCl = 0.0246367837495278, lVc = 0.0273227479429384, 
-    lKA = 0.0463157405870905, prop.err = NA), "%RSE" = c(1.76478293739746, 
+    lKA = 0.0463157405870906, prop.err = NA), "%RSE" = c(1.76478293739745, 
     0.647935405663886, 284.203156742109, NA), "Back-transformed" = c(4.03910630460963, 
     67.8224864826484, 1.01643021721288, 0.196387395264732), "CI Lower" = c(3.84870314818632, 
     64.2860205024361, 0.928225591175497, NA), "CI Upper" = c(4.23892909164099, 
@@ -14,9 +14,9 @@ NA), sigma = c(prop.err = 0.19639), parFixedDf = structure(list(
 "lVc", "lKA", "prop.err")), omega = structure(c(0.0693629298914198, 
 0, 0, 0, 0.0807660329814226, 0, 0, 0, 0.158997230308083), .Dim = c(3L, 
 3L), .Dimnames = list(c("eta.Cl", "eta.Vc", "eta.KA"), c("eta.Cl", 
-"eta.Vc", "eta.KA"))), time = structure(list(saem = 16.739, setup = 0.182837000000007, 
-    table = 0.201999999999998, cwres = 0.456999999999994, covariance = 0.04200000000003, 
-    other = 0.250162999999986), class = "data.frame", row.names = "elapsed"), 
+"eta.Vc", "eta.KA"))), time = structure(list(saem = 18.019, setup = 0.278662999999954, 
+    table = 0.221000000000004, cwres = 0.575999999999908, covariance = 0.04200000000003, 
+    other = 0.268337000000074), class = "data.frame", row.names = "elapsed"), 
     objDf = structure(list(OBJF = 20969.4678283863, AIC = 25162.8002774011, 
         BIC = 25202.9053471213, "Log-likelihood" = -12574.4001387006, 
-        "Condition Number" = 3.64256287711132), row.names = "FOCEi", class = "data.frame")) 
+        "Condition Number" = 3.64256287711133), row.names = "FOCEi", class = "data.frame")) 

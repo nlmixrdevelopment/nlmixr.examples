@@ -5,7 +5,7 @@ expected_values[[runno]] <- list(lik = c(-13469.75, 26957.49, 27009.08), param =
     lQ = 1.39044399084723, lVp = 3.94750139203019, prop.err = 0.196188135225697
     ), SE = c(lCl = 0.0294092660285816, lVc = 0.0340996502037407, 
     lQ = 0.0822160456170164, lVp = 0.0432127073018899, prop.err = NA
-    ), "%RSE" = c(2.16437159468632, 0.814427351669567, 5.91293472863445, 
+    ), "%RSE" = c(2.16437159468632, 0.814427351669567, 5.91293472863444, 
     1.09468504277501, NA), "Back-transformed" = c(3.89148198139335, 
     65.8216005539462, 4.01663300544871, 51.8057626957375, 0.196188135225697
     ), "CI Lower" = c(3.67351494696373, 61.5662588217606, 3.41884748806641, 
@@ -18,9 +18,9 @@ expected_values[[runno]] <- list(lik = c(-13469.75, 26957.49, 27009.08), param =
 0, 0, 0, 0, 0.100589087966058, 0, 0, 0, 0, 0.099486462571722, 
 0, 0, 0, 0, 0.189234793174605), .Dim = c(4L, 4L), .Dimnames = list(
     c("eta.Vc", "eta.Cl", "eta.Vp", "eta.Q"), c("eta.Vc", "eta.Cl", 
-    "eta.Vp", "eta.Q"))), time = structure(list(saem = 22.186, 
-    setup = 0.202277999999989, table = 0.173000000000002, cwres = 0.474999999999966, 
-    covariance = 0.285000000000025, other = 0.530721999999987), class = "data.frame", row.names = "elapsed"), 
+    "eta.Vp", "eta.Q"))), time = structure(list(saem = 22.349, 
+    setup = 0.284295000000039, table = 0.281999999999982, cwres = 0.669999999999959, 
+    covariance = 0.0409999999999968, other = 0.319705000000059), class = "data.frame", row.names = "elapsed"), 
     objDf = structure(list(OBJF = 22749.1339871465, AIC = 26957.4936985598, 
         BIC = 27009.0810750574, "Log-likelihood" = -13469.7468492799, 
         "Condition Number" = 8.16766140584779), row.names = "FOCEi", class = "data.frame")) 

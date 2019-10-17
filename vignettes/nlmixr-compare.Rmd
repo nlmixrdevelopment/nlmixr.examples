@@ -1,10 +1,8 @@
 ---
 title: "nlmixr Comparison"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{nlmixr comparison}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output:
+  html_document:
+    self_contained: no
 ---
 
 ```{r, include = FALSE}
@@ -48,7 +46,6 @@ Vmax of 1000 mg/h. All two-compartment models had inter-compartmental
 clearance (Q) set to 4.0 L/h.
 
 ```{r setup}
-
 library(nlmixr)
 library(dplyr)
 library(xgxr)

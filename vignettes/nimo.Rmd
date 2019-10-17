@@ -2,11 +2,9 @@
 title: "Nimotuzumab"
 author: "Mirjam Trame" 
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Nimotuzumab}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output:
+  html_document:
+    self_contained: no
 ---
 
 ```{r setup, include = FALSE}
@@ -14,7 +12,6 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
   )
-
 ## These options cache the models and the model simulations in R
 ## To run the actual models on your system, take the save options off.
 options(nlmixr.save=TRUE,
@@ -94,14 +91,17 @@ nimo <- function() {
 
 # Fit
 ```{r}
-fit <- nlmixr(nimo, nimoData, est="saem", control=list(print=0))
+load("nimoData.rda")
+fit <- nlmixr(nimo, nimoData, est="saem", control=list(print=0),
+              table=list(cwres=TRUE, npde=TRUE))
 ```
 
 #  Goodness of fit Plots
 
 ```{r}
-## Add cwres/npde after fit (can also use nlmixr(...,table=list(cwres=TRUE,npde=TRUE)))
+## Add cwres/npde after fit
 fit  <- fit %>% addCwres() %>% addNpde();
+## Since it is already there it doesn't actually change anything.
 
 
 ##Goodness-of-fit plots

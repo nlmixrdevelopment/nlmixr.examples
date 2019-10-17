@@ -1,11 +1,9 @@
 ---
 title: "Friberg Myelosuppression model"
 author: "Yuan Xiong" 
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Friberg myelosuppression model}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output:
+  html_document:
+    self_contained: no
 ---
 
 ```{r, include = FALSE}
@@ -90,7 +88,7 @@ wbc <- function() {
 ```{r saem}
 d3 = read.csv("Simulated_WBC_pacl_ddmore_samePK_nlmixr.csv", na.string = ".")
 
-fit.S <- nlmixr(wbc, d3, est="saem") %>% addCwres()
+fit.S <- nlmixr(wbc, d3, est="saem", table=list(cwres=TRUE, npde=TRUE))
 
 xpdb <- xpose_data_nlmixr(fit.S)
 plot(fit.S)
@@ -137,7 +135,7 @@ vpc.ui(fit.S, n=500, bins = c(0,170,300,350,500,600,900,3000,4580), show=list(ob
 # Fit model using FOCEi
 
 ```{r focei}
-fit.F <- nlmixr(wbc, d3, est="focei")
+fit.F <- nlmixr(wbc, d3, est="focei", table=list(cwres=TRUE, npde=TRUE))
 ```
 
 ## FOCEi Goodness of fit plots
@@ -183,4 +181,3 @@ vpc.ui(fit.F, n=500, n_bins = 10, show=list(obs_dv=T), ylab = "Neutrophil Count 
 # specify bins
 vpc.ui(fit.F, n=500, bins = c(0,170,300,350,500,600,900,3000,4580), show=list(obs_dv=T), ylab = "Neutrophil Count (10^9/L)", xlab = "Time (h)")
 ```
-

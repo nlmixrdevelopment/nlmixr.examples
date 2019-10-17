@@ -5,6 +5,7 @@ options(RxODE.cache.directory="~/.rxCache")
 ## runModel <- "U034"; runEst <- "focei"; source("uiModels.R")
 ## runModel <- "U048"; runEst <- "focei"; source("uiModels.R")
 ## runModel <- "U062"; runEst <- "focei"; source("uiModels.R")
+## runEst <- "saem"; source("uiModels.R")
 ## Use runModel to select one model to run.  ie
 ## runModel <- "U014" and then source the file
 ## Use runEst to select one estimation type ie

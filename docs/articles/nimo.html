@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nimotuzumab • nlmixr.examples</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="Nimotuzumab">
 <meta property="og:description" content="">
 <meta name="twitter:card" content="summary">
@@ -30,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">nlmixr.examples</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.1.3</span>
       </span>
     </div>
 
@@ -51,7 +52,7 @@
       <a href="https://nlmixrdevelopment.github.io/nlmixr/articles/running_nlmixr.html">Introduction to Running Nlmixr</a>
     </li>
     <li>
-      <a href="https://nlmixrdevelopment.github.io/nlmixr/articles/multiple-endpoints.html">Using Multiple Endpoints in Nlmixr</a>
+      <a href="../articles/multiple-endpoints.html">Using Multiple Endpoints in Nlmixr</a>
     </li>
     <li class="divider">
     <li class="dropdown-header">Going further</li>
@@ -73,7 +74,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="https://nlmixrdevelopment.github.io/nlmixr/articles/addingCovariances.html">Phenobarbatol with correlations</a>
+      <a href="../articles/addingCovariances.html">Phenobarbatol with correlations</a>
     </li>
     <li class="divider">
     <li class="dropdown-header">Page 2018</li>
@@ -122,15 +123,16 @@
 <!--/.navbar -->
 
       
+
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1>Nimotuzumab</h1>
                         <h4 class="author">Mirjam Trame</h4>
             
-            <h4 class="date">2019-05-10</h4>
+            <h4 class="date">2019-10-17</h4>
       
-      
+      <small class="dont-index">Source: <a href="https://github.com/nlmixrdevelopment/nlmixr/blob/master/vignettes/nimo.Rmd"><code>vignettes/nimo.Rmd</code></a></small>
       <div class="hidden name"><code>nimo.Rmd</code></div>
 
     </div>
@@ -148,17 +150,13 @@
 <div id="nlmixr-model" class="section level1">
 <h1 class="hasAnchor">
 <a href="#nlmixr-model" class="anchor"></a>nlmixr model</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(nlmixr)
-## These options cache the models and the model simulations in R
-## To run the actual models on your system, take the save options off.
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/options">options</a></span>(<span class="dt">nlmixr.save=</span><span class="ot">TRUE</span>,
-        <span class="dt">nlmixr.save.dir=</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(<span class="dt">package=</span><span class="st">"nlmixr.examples"</span>));
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(nlmixr)
 
 ## Note to get the datasets you can use:
 ## remotes::install_github("nlmixrdevelopment/nlmixr.examples")
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(nlmixr.examples) ## For nlmixr.examples data
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(nlmixr.examples) ## For nlmixr.examples data
 
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(xpose)
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(xpose)
 <span class="co">#&gt; Loading required package: ggplot2</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Attaching package: 'xpose'</span>
@@ -168,26 +166,26 @@
 <span class="co">#&gt; The following object is masked from 'package:stats':</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;     filter</span>
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(xpose.nlmixr)
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(xpose.nlmixr)
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Attaching package: 'xpose.nlmixr'</span>
 <span class="co">#&gt; The following object is masked from 'package:nlmixr':</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;     vpc</span>
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ggplot2)
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(ggplot2)
 
 nimo &lt;-<span class="st"> </span><span class="cf">function</span>() {
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/ini">ini</a></span>({
+    <span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/ini.html">ini</a></span>({
         ## Note that the UI can take expressions
         ## Also note that these initial estimates should be provided on the log-scale
-        tcl &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">log</a></span>(<span class="fl">0.001</span>)
-        tv1 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">log</a></span>(<span class="fl">1.45</span>)
-        tQ &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">log</a></span>(<span class="fl">0.004</span>)
-        tv2 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">log</a></span>(<span class="dv">44</span>)
-        tkss &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">log</a></span>(<span class="dv">12</span>)
-        tkint &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">log</a></span>(<span class="fl">0.3</span>)
-        tksyn &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">log</a></span>(<span class="dv">1</span>)
-        tkdeg &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">log</a></span>(<span class="dv">7</span>)
+        tcl &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">log</a></span>(<span class="fl">0.001</span>)
+        tv1 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">log</a></span>(<span class="fl">1.45</span>)
+        tQ &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">log</a></span>(<span class="fl">0.004</span>)
+        tv2 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">log</a></span>(<span class="dv">44</span>)
+        tkss &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">log</a></span>(<span class="dv">12</span>)
+        tkint &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">log</a></span>(<span class="fl">0.3</span>)
+        tksyn &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">log</a></span>(<span class="dv">1</span>)
+        tkdeg &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">log</a></span>(<span class="dv">7</span>)
         ## Initial estimates should be high for SAEM ETAs
         eta.cl  <span class="op">~</span><span class="st"> </span><span class="dv">2</span>
         eta.v1  <span class="op">~</span><span class="st"> </span><span class="dv">2</span>
@@ -195,15 +193,15 @@ nimo &lt;-<span class="st"> </span><span class="cf">function</span>() {
         ##  Also true for additive error (also ignored in SAEM)
         add.err &lt;-<span class="st"> </span><span class="dv">10</span>
     })
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/model">model</a></span>({
-        cl &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(tcl <span class="op">+</span><span class="st"> </span>eta.cl)
-        v1 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(tv1 <span class="op">+</span><span class="st"> </span>eta.v1)
-        Q  &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(tQ)
-        v2 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(tv2)
-        kss &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(tkss <span class="op">+</span><span class="st"> </span>eta.kss)
-        kint &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(tkint)
-        ksyn &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(tksyn)
-        kdeg &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>(tkdeg)
+    <span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/model.html">model</a></span>({
+        cl &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(tcl <span class="op">+</span><span class="st"> </span>eta.cl)
+        v1 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(tv1 <span class="op">+</span><span class="st"> </span>eta.v1)
+        Q  &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(tQ)
+        v2 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(tv2)
+        kss &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(tkss <span class="op">+</span><span class="st"> </span>eta.kss)
+        kint &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(tkint)
+        ksyn &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(tksyn)
+        kdeg &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(tkdeg)
 
         k &lt;-<span class="st"> </span>cl<span class="op">/</span>v1
         k12 &lt;-<span class="st"> </span>Q<span class="op">/</span>v1
@@ -212,13 +210,13 @@ nimo &lt;-<span class="st"> </span><span class="cf">function</span>() {
         <span class="kw">eff</span>(<span class="dv">0</span>) &lt;-<span class="st"> </span>ksyn<span class="op">/</span>kdeg ##initializing compartment
 
         ## Concentration is calculated
-        conc =<span class="st"> </span><span class="fl">0.5</span><span class="op">*</span>(central<span class="op">/</span>v1<span class="op">-</span>eff<span class="op">-</span>kss)<span class="op">+</span><span class="fl">0.5</span><span class="op">*</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/MathFun">sqrt</a></span>((central<span class="op">/</span>v1<span class="op">-</span>eff<span class="op">-</span>kss)<span class="op">**</span><span class="dv">2</span><span class="op">+</span><span class="dv">4</span><span class="op">*</span>kss<span class="op">*</span>central<span class="op">/</span>v1)
+        conc =<span class="st"> </span><span class="fl">0.5</span><span class="op">*</span>(central<span class="op">/</span>v1<span class="op">-</span>eff<span class="op">-</span>kss)<span class="op">+</span><span class="fl">0.5</span><span class="op">*</span><span class="kw"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span>((central<span class="op">/</span>v1<span class="op">-</span>eff<span class="op">-</span>kss)<span class="op">**</span><span class="dv">2</span><span class="op">+</span><span class="dv">4</span><span class="op">*</span>kss<span class="op">*</span>central<span class="op">/</span>v1)
 
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(central)  =<span class="st"> </span><span class="op">-</span>(k<span class="op">+</span>k12)<span class="op">*</span>conc<span class="op">*</span>v1<span class="op">+</span>k21<span class="op">*</span>peripheral<span class="op">-</span>kint<span class="op">*</span>eff<span class="op">*</span>conc<span class="op">*</span>v1<span class="op">/</span>(kss<span class="op">+</span>conc)
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(peripheral) =<span class="st"> </span>k12<span class="op">*</span>conc<span class="op">*</span>v1<span class="op">-</span>k21<span class="op">*</span>peripheral  ##Free Drug second compartment amount
-        d<span class="op">/</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/TDist">dt</a></span>(eff) =<span class="st"> </span>ksyn <span class="op">-</span><span class="st"> </span>kdeg<span class="op">*</span>eff <span class="op">-</span><span class="st"> </span>(kint<span class="op">-</span>kdeg)<span class="op">*</span>conc<span class="op">*</span>eff<span class="op">/</span>(kss<span class="op">+</span>conc)
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(central)  =<span class="st"> </span><span class="op">-</span>(k<span class="op">+</span>k12)<span class="op">*</span>conc<span class="op">*</span>v1<span class="op">+</span>k21<span class="op">*</span>peripheral<span class="op">-</span>kint<span class="op">*</span>eff<span class="op">*</span>conc<span class="op">*</span>v1<span class="op">/</span>(kss<span class="op">+</span>conc)
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(peripheral) =<span class="st"> </span>k12<span class="op">*</span>conc<span class="op">*</span>v1<span class="op">-</span>k21<span class="op">*</span>peripheral  ##Free Drug second compartment amount
+        d<span class="op">/</span><span class="kw"><a href="https://rdrr.io/r/stats/TDist.html">dt</a></span>(eff) =<span class="st"> </span>ksyn <span class="op">-</span><span class="st"> </span>kdeg<span class="op">*</span>eff <span class="op">-</span><span class="st"> </span>(kint<span class="op">-</span>kdeg)<span class="op">*</span>conc<span class="op">*</span>eff<span class="op">/</span>(kss<span class="op">+</span>conc)
 
-        IPRED=<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">log</a></span>(conc)
+        IPRED=<span class="kw"><a href="https://rdrr.io/r/base/Log.html">log</a></span>(conc)
 
         IPRED <span class="op">~</span><span class="st"> </span><span class="kw">add</span>(add.err)
     })
@@ -227,112 +225,113 @@ nimo &lt;-<span class="st"> </span><span class="cf">function</span>() {
 <div id="fit" class="section level1">
 <h1 class="hasAnchor">
 <a href="#fit" class="anchor"></a>Fit</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fit &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/nlmixr">nlmixr</a></span>(nimo, nimoData, <span class="dt">est=</span><span class="st">"saem"</span>, <span class="dt">control=</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(<span class="dt">print=</span><span class="dv">0</span>))
-<span class="co">#&gt; Loading model already run (/home/matt/R/x86_64-pc-linux-gnu-library/3.5/nlmixr.examples/nlmixr-nimo-nimoData-saem-71a71aacdcb2cc5c08a2b950a446cefd.rds)</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://rdrr.io/r/base/load.html">load</a></span>(<span class="st">"nimoData.rda"</span>)
+fit &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/nlmixr.html">nlmixr</a></span>(nimo, nimoData, <span class="dt">est=</span><span class="st">"saem"</span>, <span class="dt">control=</span><span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="dt">print=</span><span class="dv">0</span>),
+              <span class="dt">table=</span><span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="dt">cwres=</span><span class="ot">TRUE</span>, <span class="dt">npde=</span><span class="ot">TRUE</span>))
+<span class="co">#&gt; Loading model already run (/tmp/RtmpXKdUFj/temp_libpath58be457a881a/nlmixr.examples/nlmixr-nimo-nimoData-saem-1c85d7f280783584155ad6862394fe4b.rds)</span>
+<span class="co">#&gt; Warning in lapply(X = X, FUN = FUN, ...): ID missing in parameters dataset;</span>
+<span class="co">#&gt;  Parameters are assumed to have the same order as the IDs in the event dataset</span>
+<span class="co">#&gt; Warning in lapply(X = X, FUN = FUN, ...): Calculated residuals like IPRED</span>
+<span class="co">#&gt; are masked by nlmixr calculated values</span></code></pre></div>
 </div>
 <div id="goodness-of-fit-plots" class="section level1">
 <h1 class="hasAnchor">
 <a href="#goodness-of-fit-plots" class="anchor"></a>Goodness of fit Plots</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## Add cwres/npde after fit (can also use nlmixr(...,table=list(cwres=TRUE,npde=TRUE)))
-fit  &lt;-<span class="st"> </span>fit <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/addCwres">addCwres</a></span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/addNpde">addNpde</a></span>();
-<span class="co">#&gt; Calculating residuals/tables</span>
-<span class="co">#&gt; done.</span>
-<span class="co">#&gt; Warning in .collectWarnings(do.call(foceiFit.data.frame0, call, envir =</span>
-<span class="co">#&gt; parent.frame(1))): Calculated residuals like IPRED are masked by nlmixr</span>
-<span class="co">#&gt; calculated values</span>
-<span class="co">#&gt; Compiling NPDE model...</span>
-<span class="co">#&gt; done</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## Add cwres/npde after fit
+fit  &lt;-<span class="st"> </span>fit <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/addCwres.html">addCwres</a></span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/addNpde.html">addNpde</a></span>();
+<span class="co">#&gt; Warning in addNpde(.): Already contains NPDE</span>
+## Since it is already there it doesn't actually change anything.
 
 
 ##Goodness-of-fit plots
 
-<span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(fit); ## Standard nlmixr plots</code></pre></div>
-<p><img src="nimo_files/figure-html/unnamed-chunk-3-1.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-2.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-3.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-4.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-5.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-6.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-7.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-8.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-9.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-10.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-11.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-12.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-13.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-14.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-15.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-16.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-17.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-18.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-19.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-20.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-21.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-22.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-23.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-24.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-25.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-26.png" width="700"></p>
+<span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(fit); ## Standard nlmixr plots</code></pre></div>
+<p><img src="nimo_files/figure-html/unnamed-chunk-3-1.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-2.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-3.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-4.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-5.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-6.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-7.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-8.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-9.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-10.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-11.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-12.png" width="700"><img src="nimo_files/figure-html/unnamed-chunk-3-13.png" width="700"></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
 ################################################################################
 ## Xpose plots; Need to print otherwise running a script won't
 ## show xpose plots
 ################################################################################
-xpdb &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/xpose.nlmixr/topics/xpose_data_nlmixr">xpose_data_nlmixr</a></span>(fit) ## first convert to nlmixr object
+xpdb &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/xpose.nlmixr/man/xpose_data_nlmixr.html">xpose_data_nlmixr</a></span>(fit) ## first convert to nlmixr object
+<span class="co">#&gt; Warning: `complete_()` is deprecated as of tidyr 1.0.0.</span>
+<span class="co">#&gt; Please use `complete()` instead.</span>
+<span class="co">#&gt; This warning is displayed once per session.</span>
+<span class="co">#&gt; Call `lifecycle::last_warnings()` to see where this warning was generated.</span>
 
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/xpose/topics/dv_vs_pred">dv_vs_pred</a></span>(xpdb) <span class="op">+</span>
-<span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">ylab</a></span>(<span class="st">"Observed Nimotuzumab Concentrations (ug/mL)"</span>) <span class="op">+</span>
-<span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">xlab</a></span>(<span class="st">"Population Predicted Nimotuzumab Concentrations (ug/mL)"</span>))</code></pre></div>
-<p><img src="nimo_files/figure-html/unnamed-chunk-3-27.png" width="700"></p>
+<span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/xpose/man/dv_vs_pred.html">dv_vs_pred</a></span>(xpdb) <span class="op">+</span>
+<span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Observed Nimotuzumab Concentrations (ug/mL)"</span>) <span class="op">+</span>
+<span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Population Predicted Nimotuzumab Concentrations (ug/mL)"</span>))</code></pre></div>
+<p><img src="nimo_files/figure-html/unnamed-chunk-3-14.png" width="700"></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/xpose/topics/dv_vs_pred">dv_vs_ipred</a></span>(xpdb) <span class="op">+</span>
-<span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">ylab</a></span>(<span class="st">"Observed Nimotuzumab Concentrations (ug/mL)"</span>) <span class="op">+</span>
-<span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">xlab</a></span>(<span class="st">"Individual Predicted Nimotuzumab Concentrations (ug/mL)"</span>))</code></pre></div>
-<p><img src="nimo_files/figure-html/unnamed-chunk-3-28.png" width="700"></p>
+<span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/xpose/man/dv_vs_pred.html">dv_vs_ipred</a></span>(xpdb) <span class="op">+</span>
+<span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Observed Nimotuzumab Concentrations (ug/mL)"</span>) <span class="op">+</span>
+<span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Individual Predicted Nimotuzumab Concentrations (ug/mL)"</span>))</code></pre></div>
+<p><img src="nimo_files/figure-html/unnamed-chunk-3-15.png" width="700"></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/xpose/topics/res_vs_pred">res_vs_pred</a></span>(xpdb) <span class="op">+</span>
-<span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">ylab</a></span>(<span class="st">"Conditional Weighted Residuals"</span>) <span class="op">+</span>
-<span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">xlab</a></span>(<span class="st">"Population Predicted Nimotuzumab Concentrations (ug/mL)"</span>))</code></pre></div>
-<p><img src="nimo_files/figure-html/unnamed-chunk-3-29.png" width="700"></p>
+<span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/xpose/man/res_vs_pred.html">res_vs_pred</a></span>(xpdb) <span class="op">+</span>
+<span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Conditional Weighted Residuals"</span>) <span class="op">+</span>
+<span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Population Predicted Nimotuzumab Concentrations (ug/mL)"</span>))</code></pre></div>
+<p><img src="nimo_files/figure-html/unnamed-chunk-3-16.png" width="700"></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/xpose/topics/res_vs_idv">res_vs_idv</a></span>(xpdb) <span class="op">+</span>
-<span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">ylab</a></span>(<span class="st">"Conditional Weighted Residuals"</span>) <span class="op">+</span>
-<span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">xlab</a></span>(<span class="st">"Time (h)"</span>))</code></pre></div>
-<p><img src="nimo_files/figure-html/unnamed-chunk-3-30.png" width="700"></p>
+<span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/xpose/man/res_vs_idv.html">res_vs_idv</a></span>(xpdb) <span class="op">+</span>
+<span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Conditional Weighted Residuals"</span>) <span class="op">+</span>
+<span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Time (h)"</span>))</code></pre></div>
+<p><img src="nimo_files/figure-html/unnamed-chunk-3-17.png" width="700"></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/xpose/topics/minimization_plots">prm_vs_iteration</a></span>(xpdb))</code></pre></div>
-<p><img src="nimo_files/figure-html/unnamed-chunk-3-31.png" width="700"></p>
+<span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/xpose/man/minimization_plots.html">prm_vs_iteration</a></span>(xpdb))</code></pre></div>
+<p><img src="nimo_files/figure-html/unnamed-chunk-3-18.png" width="700"></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/xpose/topics/res_vs_idv">absval_res_vs_idv</a></span>(xpdb, <span class="dt">res =</span> <span class="st">'IWRES'</span>) <span class="op">+</span>
-<span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">ylab</a></span>(<span class="st">"Individual Weighted Residuals"</span>) <span class="op">+</span>
-<span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">xlab</a></span>(<span class="st">"Time (h)"</span>))</code></pre></div>
-<p><img src="nimo_files/figure-html/unnamed-chunk-3-32.png" width="700"></p>
+<span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/xpose/man/res_vs_idv.html">absval_res_vs_idv</a></span>(xpdb, <span class="dt">res =</span> <span class="st">'IWRES'</span>) <span class="op">+</span>
+<span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Individual Weighted Residuals"</span>) <span class="op">+</span>
+<span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Time (h)"</span>))</code></pre></div>
+<p><img src="nimo_files/figure-html/unnamed-chunk-3-19.png" width="700"></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/xpose/topics/res_vs_pred">absval_res_vs_pred</a></span>(xpdb, <span class="dt">res =</span> <span class="st">'IWRES'</span>) <span class="op">+</span>
-<span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">ylab</a></span>(<span class="st">"Individual Weighted Residuals"</span>) <span class="op">+</span>
-<span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">xlab</a></span>(<span class="st">"Population Predicted Nimotuzumab Concentrations (ug/mL)"</span>))</code></pre></div>
-<p><img src="nimo_files/figure-html/unnamed-chunk-3-33.png" width="700"></p>
+<span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/xpose/man/res_vs_pred.html">absval_res_vs_pred</a></span>(xpdb, <span class="dt">res =</span> <span class="st">'IWRES'</span>) <span class="op">+</span>
+<span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Individual Weighted Residuals"</span>) <span class="op">+</span>
+<span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Population Predicted Nimotuzumab Concentrations (ug/mL)"</span>))</code></pre></div>
+<p><img src="nimo_files/figure-html/unnamed-chunk-3-20.png" width="700"></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/xpose/topics/ind_plots">ind_plots</a></span>(xpdb, <span class="dt">nrow=</span><span class="dv">3</span>, <span class="dt">ncol=</span><span class="dv">4</span>) <span class="op">+</span>
-<span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">ylab</a></span>(<span class="st">"Predicted and Observed Nimotuzumab concentrations (ug/mL)"</span>) <span class="op">+</span>
-<span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">xlab</a></span>(<span class="st">"Time (h)"</span>))</code></pre></div>
-<p><img src="nimo_files/figure-html/unnamed-chunk-3-34.png" width="700"></p>
+<span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/xpose/man/ind_plots.html">ind_plots</a></span>(xpdb, <span class="dt">nrow=</span><span class="dv">3</span>, <span class="dt">ncol=</span><span class="dv">4</span>) <span class="op">+</span>
+<span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Predicted and Observed Nimotuzumab concentrations (ug/mL)"</span>) <span class="op">+</span>
+<span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Time (h)"</span>))</code></pre></div>
+<p><img src="nimo_files/figure-html/unnamed-chunk-3-21.png" width="700"></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/xpose/topics/distrib_plot">res_distrib</a></span>(xpdb) <span class="op">+</span>
-<span class="st">     </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">ylab</a></span>(<span class="st">"Density"</span>) <span class="op">+</span>
-<span class="st">     </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">xlab</a></span>(<span class="st">"Conditional Weighted Residuals"</span>))</code></pre></div>
-<p><img src="nimo_files/figure-html/unnamed-chunk-3-35.png" width="700"></p>
+<span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/pkg/xpose/man/distrib_plot.html">res_distrib</a></span>(xpdb) <span class="op">+</span>
+<span class="st">     </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span>(<span class="st">"Density"</span>) <span class="op">+</span>
+<span class="st">     </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span>(<span class="st">"Conditional Weighted Residuals"</span>))</code></pre></div>
+<p><img src="nimo_files/figure-html/unnamed-chunk-3-22.png" width="700"></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
 ################################################################################
 ##Visual Predictive Checks
 ################################################################################
-<span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/vpc_ui">vpc.ui</a></span>(fit,<span class="dt">n=</span><span class="dv">500</span>,<span class="dt">stratify=</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"dos"</span>), <span class="dt">show=</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(<span class="dt">obs_dv=</span>T),
-       <span class="dt">bins =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="op">-</span><span class="fl">0.5</span>,<span class="dv">0</span>,<span class="dv">25</span>,<span class="dv">75</span>,<span class="dv">100</span>,<span class="dv">200</span>,<span class="dv">400</span>,<span class="dv">600</span>,<span class="dv">750</span>,<span class="dv">900</span>,<span class="dv">1100</span>,<span class="dv">1200</span>,<span class="dv">1400</span>,<span class="dv">1600</span>,<span class="dv">1900</span>,<span class="dv">2150</span>,<span class="dv">2300</span>),
+<span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/vpc_ui.html">vpc.ui</a></span>(fit,<span class="dt">n=</span><span class="dv">500</span>,<span class="dt">stratify=</span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"dos"</span>), <span class="dt">show=</span><span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="dt">obs_dv=</span>T),
+       <span class="dt">bins =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="op">-</span><span class="fl">0.5</span>,<span class="dv">0</span>,<span class="dv">25</span>,<span class="dv">75</span>,<span class="dv">100</span>,<span class="dv">200</span>,<span class="dv">400</span>,<span class="dv">600</span>,<span class="dv">750</span>,<span class="dv">900</span>,<span class="dv">1100</span>,<span class="dv">1200</span>,<span class="dv">1400</span>,<span class="dv">1600</span>,<span class="dv">1900</span>,<span class="dv">2150</span>,<span class="dv">2300</span>),
        <span class="dt">ylab =</span> <span class="st">"Nimotuzumab Concentrations (ug/mL)"</span>, <span class="dt">xlab =</span> <span class="st">"Time (h)"</span>)
-<span class="co">#&gt; Compiling VPC model...done</span>
-<span class="co">#&gt; done (3.22 sec)</span>
-<span class="co">#&gt; Warning in data.frame(..., check.names = FALSE): row names were found from</span>
-<span class="co">#&gt; a short variable and have been discarded</span>
+<span class="co">#&gt; Loading vpc already run (/tmp/RtmpXKdUFj/temp_libpath58be457a881a/nlmixr.examples/nlmixr-vpc-nimo-nimoData--f758cba02e5dd0415b091df7f94d896a.rds)</span>
 <span class="co">#&gt;   $rxsim = original simulated data</span>
 <span class="co">#&gt;   $sim = merge simulated data</span>
 <span class="co">#&gt;   $obs = observed data</span>
 <span class="co">#&gt;   $gg = vpc ggplot</span>
 <span class="co">#&gt; use vpc(...) to change plot options</span>
 <span class="co">#&gt; plotting the object now</span></code></pre></div>
-<p><img src="nimo_files/figure-html/unnamed-chunk-3-36.png" width="700"></p>
+<p><img src="nimo_files/figure-html/unnamed-chunk-3-23.png" width="700"></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
-<span class="kw"><a href="https://www.rdocumentation.org/packages/nlmixr/topics/vpc_ui">vpc.ui</a></span>(fit,<span class="dt">n=</span><span class="dv">500</span>, <span class="dt">show=</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(<span class="dt">obs_dv=</span>T),
-       <span class="dt">bins =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="op">-</span><span class="fl">0.5</span>,<span class="dv">0</span>,<span class="dv">25</span>,<span class="dv">75</span>,<span class="dv">100</span>,<span class="dv">200</span>,<span class="dv">400</span>,<span class="dv">600</span>,<span class="dv">750</span>,<span class="dv">900</span>,<span class="dv">1100</span>,<span class="dv">1200</span>,<span class="dv">1400</span>,<span class="dv">1600</span>,<span class="dv">1900</span>,<span class="dv">2150</span>,<span class="dv">2300</span>),
+<span class="kw"><a href="https://rdrr.io/pkg/nlmixr/man/vpc_ui.html">vpc.ui</a></span>(fit,<span class="dt">n=</span><span class="dv">500</span>, <span class="dt">show=</span><span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="dt">obs_dv=</span>T),
+       <span class="dt">bins =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="op">-</span><span class="fl">0.5</span>,<span class="dv">0</span>,<span class="dv">25</span>,<span class="dv">75</span>,<span class="dv">100</span>,<span class="dv">200</span>,<span class="dv">400</span>,<span class="dv">600</span>,<span class="dv">750</span>,<span class="dv">900</span>,<span class="dv">1100</span>,<span class="dv">1200</span>,<span class="dv">1400</span>,<span class="dv">1600</span>,<span class="dv">1900</span>,<span class="dv">2150</span>,<span class="dv">2300</span>),
        <span class="dt">ylab =</span> <span class="st">"Nimotuzumab Concentrations (ug/mL)"</span>, <span class="dt">xlab =</span> <span class="st">"Time (h)"</span>)
-<span class="co">#&gt; Compiling VPC model...</span>
-<span class="co">#&gt; done</span>
-<span class="co">#&gt; done (3.25 sec)</span>
+<span class="co">#&gt; Loading vpc already run (/tmp/RtmpXKdUFj/temp_libpath58be457a881a/nlmixr.examples/nlmixr-vpc-nimo-nimoData--8e579521023727c8f94f9200f08079d5.rds)</span>
 <span class="co">#&gt;   $rxsim = original simulated data</span>
 <span class="co">#&gt;   $sim = merge simulated data</span>
 <span class="co">#&gt;   $obs = observed data</span>
 <span class="co">#&gt;   $gg = vpc ggplot</span>
 <span class="co">#&gt; use vpc(...) to change plot options</span>
 <span class="co">#&gt; plotting the object now</span></code></pre></div>
-<p><img src="nimo_files/figure-html/unnamed-chunk-3-37.png" width="700"></p>
+<p><img src="nimo_files/figure-html/unnamed-chunk-3-24.png" width="700"></p>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+
         <div id="tocnav">
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
@@ -347,17 +346,20 @@ xpdb &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocume
 </div>
 
 
+
       <footer><div class="copyright">
   <p>Developed by Matthew Fidler, Yuan Xiong, Rik Schoemaker, Justin Wilkins, Mirjam Trame, Richard Hooijmaijers, Teun Post, Wenping Wang.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
+
       </footer>
 </div>
 
   
+
 
   </body>
 </html>

@@ -15,8 +15,8 @@ lQ = 0.0403902440147608, lVp = 0.039850526304257, prop.err = NA
 0, 0, 0, 0, 0.161378506274859, 0, 0, 0, 0, 0.143739376399012, 
 0, 0, 0, 0, 0.157239748979002), .Dim = c(4L, 4L), .Dimnames = list(
     c("eta.Vc", "eta.Cl", "eta.Vp", "eta.Q"), c("eta.Vc", "eta.Cl", 
-    "eta.Vp", "eta.Q"))), time = structure(list(saem = 21.485, 
-    setup = 2.865353, table = 0.0180000000000291, covariance = 0.249000000000024, 
-    other = 0.696646999999956, logLik = 3.56600000000003), class = "data.frame", row.names = "elapsed"), 
+    "eta.Vp", "eta.Q"))), time = structure(list(saem = 20.989, 
+    setup = 4.04465400000003, table = 0.0139999999999532, covariance = 0.00999999999999091, 
+    other = 0.561346000000025, logLik = 0.286999999999978), class = "data.frame", row.names = "elapsed"), 
     objDf = structure(list(OBJF = Inf, AIC = Inf, BIC = Inf, 
         "Log-likelihood" = -Inf, "Condition Number" = 1.68010206242144), row.names = "gauss3_1.6", class = "data.frame")) 

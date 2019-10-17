@@ -10,3 +10,4 @@ vignettes/*_files/*
 /vignettes/xgxr-nlmixr-ggpmx.tex
 /vignettes/Rplots.pdf
 /vignettes/.Rhistory
+*.rds

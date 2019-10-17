@@ -1,18 +1,16 @@
 ---
 title: "Using Broom with nlmixr"
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Using Broom with nlmixr}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output:
+  html_document:
+    self_contained: no
 ---
 ```{r, echo=FALSE}
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 ## To allow nlmixr to reload runs without large run times
 ## To run the actual models on your system, take the save options off.
 options(nlmixr.save=TRUE,
-        nlmixr.save.dir=system.file(package="nlmixr"));
+        nlmixr.save.dir=system.file(package="nlmixr.examples"));
 
 ``` 
 ![nlmixr](logo.png)
@@ -54,8 +52,8 @@ pheno <- function() {
 }
 
 ## We will run it two ways to allow comparisons
-fit.s <- nlmixr(pheno, pheno_sd, "saem", control=list(logLik=TRUE), table=list(cwres=TRUE))
-fit.f <- nlmixr(pheno, pheno_sd, "focei")
+fit.s <- nlmixr(pheno, pheno_sd, "saem", control=list(logLik=TRUE), table=list(cwres=TRUE, npde=TRUE))
+fit.f <- nlmixr(pheno, pheno_sd, "focei", table=list(cwres=TRUE, npde=TRUE))
 ```
 # Glancing at the goodness of fit metrics
 

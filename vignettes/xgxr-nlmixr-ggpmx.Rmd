@@ -1,10 +1,8 @@
 ---
 title: "xgxr nlmixr and ggPmx integration"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{xgxr nlmixr and ggPmx integration}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output:
+  html_document:
+    self_contained: no
 ---
 
 ```{r, include = FALSE}
@@ -23,7 +21,7 @@ options(nlmixr.save=TRUE,
 This shows an example of integrated workflow between `xgxr` `nlmixr`
 and `ggPmx`
 
-```{r setup}
+```{r load}
 library(nlmixr)
 library(xgxr)
 library(readr)
@@ -111,7 +109,8 @@ ggplot(data = pk_data_cycle1, aes(x     = NOMTIME,
     xgx_annotate_status(status) #  Adds draft status to plot
 ```
 
-With this plot you see the mean concentrations confidence intervals stratified by dose
+With this plot you see the mean concentrations confidence intervals
+stratified by dose
 
 ## Concentration over time, faceted by Dose, mean +/- 95% CI, overlaid on gray spaghetti plots
 
@@ -253,21 +252,18 @@ print(cmt2m)
 
 ```{r}
 ## First try log-normal (since the variabilitiy seemed proportional to concentration)
-cmt2fit.logn <- nlmixr(cmt2m, dat, "saem")
+cmt2fit.logn <- nlmixr(cmt2m, dat, "saem", table=tableControl(npde=TRUE,cwres=TRUE))
 
-plot(augPred(cmt2fit.logn))
-
-addNpde(cmt2fit.logn)
 
 ## Now try proportional
 cmt2fit.prop <- cmt2fit.logn %>%
     update(linCmt() ~ prop(prop.sd)) %>%
-    nlmixr(est="saem")
+    nlmixr(est="saem", table=tableControl(npde=TRUE, cwres=TRUE))
 
 ## now try add+prop
 cmt2fit.add.prop <- cmt2fit.prop %>%
     update(linCmt() ~ prop(prop.sd) + add(add.sd)) %>%
-    nlmixr(est="saem")
+    nlmixr(est="saem", table=tableControl(npde=TRUE, cwres=TRUE))
 ```
 
 Now that we have run 3 different estimation methods, we can compare the results side-by-side
@@ -300,25 +296,39 @@ dwplot(list("lognormal"=cmt2fit.logn, "proportional"=cmt2fit.prop), exponentiate
 # Model Diagnostics with ggPMX
 
 ```{r}
-library(ggPMX)
+## The controller then can be piped into a specific plot
+ctr <- pmx_nlmixr(cmt2fit.logn, conts = c("WEIGHTB"), cats="TRTACT")
 
-ctr <- pmx_nlmixr(cmt2fit.logn, conts = c("WEIGHTB"), cats="")
+ctr %>% pmx_plot_dv_ipred
 
-## ## Unlike standard tidyverse, the controller is modified by piping plots into it.
-## ctr %>% pmx_plot_dv_ipred
-## ctr %>% pmx_plot_dv_pred
-## ctr %>% pmx_plot_abs_iwres_ipred
-## ctr %>% pmx_plot_individual(1)
-## ctr %>% pmx_plot_iwres_dens
-## ctr %>% pmx_plot_npde_qq
-## ctr %>% pmx_plot_npde_pred
-## ctr %>% pmx_plot_npde_time
-## ctr %>% pmx_plot_eta_qq
-## ctr %>% pmx_plot_vpc
-## ctr %>% pmx_plot_eta_box
-## ctr %>% pmx_plot_eta_hist
-## ctr %>% pmx_plot_eta_matrix
+ctr %>% pmx_plot_dv_pred
 
-## ctr %>% pmx_report("nlmixr_report","/tmp")
+ctr %>% pmx_plot_abs_iwres_ipred
 
+ctr %>% pmx_plot_individual(1)
+
+ctr %>% pmx_plot_iwres_dens
+
+ctr %>% pmx_plot_npde_qq
+
+ctr %>% pmx_plot_npde_pred
+
+ctr %>% pmx_plot_npde_time
+
+ctr %>% pmx_plot_eta_qq
+
+ctr %>% pmx_plot_vpc
+
+ctr %>% pmx_plot_eta_box
+
+ctr %>% pmx_plot_eta_hist
+
+ctr %>% pmx_plot_eta_matrix
+
+## Create a report of all the plots you generated from the controller
+ctr %>% pmx_report("nlmixr_report",".")
+
+unlink("nlmixr_report.Rmd") # Remove this file so it isn't confused with vignettes
 ```
+
+This creates 2 reports, both a [pdf](nlmixr_report.pdf) and [word](nlmixr_report.docx) document.

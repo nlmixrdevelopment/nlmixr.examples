@@ -2,11 +2,9 @@
 title: "mavoglurant -- Physiologically-based PK"
 author: "Wenping Wang"
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{mavoglurant -- Physiologically-based PK}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output:
+  html_document:
+    self_contained: no
 ---
 
 ```{r setup, include = FALSE}
@@ -152,7 +150,6 @@ gofs <- function(fit){
     ## Standard plots
     ################################################################################
     plot(fit);
-    fit <- addCwres(fit);
 
     xpdb <- xpose_data_nlmixr(fit) ## Convert to nlmixr object
 
@@ -207,7 +204,7 @@ gofs <- function(fit){
 ## Fit add+prop SAEM
 
 ```{r}
-fit.addProp.S <- nlmixr(pbpk, dat, est="saem")
+fit.addProp.S <- nlmixr(pbpk, dat, est="saem", table=list(cwres=TRUE, npde=TRUE))
 
 gofs(fit.addProp.S);
 ```
@@ -217,7 +214,8 @@ gofs(fit.addProp.S);
 ```{r}
 fit.lnorm.S <- pbpk %>%
     model({C15 ~ lnorm(lnorm.err)}) %>% # Change C15 to be log-normally distributed
-    nlmixr(dat,est="saem") # Requires data since pining from pbpk model
+    ## Requires data since piping from pbpk model
+    nlmixr(dat,est="saem", table=list(cwres=TRUE, npde=TRUE))
 ```
 **NOTE:** lognormal distribution AIC/loglik/etc is on normal scale.
 Therefore, you can compare the AICs between fit.lnorm and
@@ -238,8 +236,10 @@ estimation methods.
 ## Additive + Proportional
 ```{r}
 fit.addProp.F <- fit.addProp.S %>%
-    nlmixr(est="focei"); ## Since this was a model pipline, the data
-                         ## remains the same as the last fit.
+    nlmixr(est="focei", table=list(cwres=TRUE, npde=TRUE));
+## Since this was a model pipline, the data
+## remains the same as the last fit.
+
 gofs(fit.addProp.F);
 ```
 
@@ -247,7 +247,8 @@ gofs(fit.addProp.F);
 ```{r}
 fit.lnorm.F <- fit.addProp.F %>%
     model({C15 ~ lnorm(lnorm.err)}) %>%
-    nlmixr(est="focei"); ## In this model pipline we are changing the fit method to focei.
+    nlmixr(est="focei", table=list(cwres=TRUE, npde=TRUE));
+## In this model pipline we are changing the fit method to focei.
 
 gofs(fit.lnorm.F);
 ```
@@ -361,7 +362,7 @@ pbpkL <- function(){
 }
 
 fit.lnorm.trans <- pbpkL %>%
-    nlmixr(datL,est="saem")
+    nlmixr(datL,est="saem", table=list(npde=TRUE, cwres=TRUE))
 ```
 
 **NOTE:** the estimates are the same but the AIC is different since it

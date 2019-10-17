@@ -12,9 +12,8 @@ expected_values[[runno]] <- list(lik = c(-43434.32, 86878.64, 86912.88), param =
     "prop.err")), omega = structure(c(0.0590340270554179, 0, 
     0, 0.0489820650980044), .Dim = c(2L, 2L), .Dimnames = list(
         c("eta.Vc", "eta.Cl"), c("eta.Vc", "eta.Cl"))), time = structure(list(
-        saem = 72.621, setup = 0.172541999999997, table = 0.384000000000015, 
-        cwres = 0.56899999999996, covariance = 0.134999999999991, 
-        other = 0.28845800000002), class = "data.frame", row.names = "elapsed"), 
+        saem = 66.965, setup = 0.261439999999995, table = 0.55400000000003, 
+        cwres = 0.829000000000008, covariance = 0.125, other = 0.310559999999953), class = "data.frame", row.names = "elapsed"), 
     objDf = structure(list(OBJF = 74089.8814706978, AIC = 86878.6407134419, 
         BIC = 86912.8753559424, "Log-likelihood" = -43434.320356721, 
         "Condition Number" = 1.37569117209564), row.names = "FOCEi", class = "data.frame")) 
